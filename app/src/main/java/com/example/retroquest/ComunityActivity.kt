@@ -44,6 +44,8 @@ class ComunityActivity : AppCompatActivity() {
         val gifDrawable2 = GifDrawable(resources, R.drawable.alert)
         gifImageView2.setImageDrawable(gifDrawable2)
         gifDrawable2.start()
+
+
     }
 
 
@@ -134,14 +136,15 @@ class ComunityActivity : AppCompatActivity() {
             val author = data?.getStringExtra("AUTHOR")
             val content = data?.getStringExtra("CONTENT")
             val date = data?.getStringExtra("DATE")
+            val selectedImg = data?.getIntExtra("IMAGE",0)
 
-            postList.add(PostData(title!!, author!!, content!!, date!!)) // 리스트에 아이템 추가
+            postList.add(PostData(title!!, author!!, content!!, date!!,selectedImg!!)) // 리스트에 아이템 추가
 
-            updatePostList() // 아이템 목록 갱신
+            updatePostList(selectedImg) // 아이템 목록 갱신
         }
     }
 
-    private fun updatePostList() {
+    private fun updatePostList(selectedImg: Int) {
         val postListLayout = findViewById<LinearLayout>(R.id.postListLayout)
          postListLayout.removeAllViews()
 
@@ -151,7 +154,7 @@ class ComunityActivity : AppCompatActivity() {
             val postTitleView = itemView.findViewById<TextView>(R.id.postTitleTextView)
             val postContentTextView = itemView.findViewById<TextView>(R.id.postContentTextView)
             val postFullContentTextView = itemView.findViewById<TextView>(R.id.postFullContentTextView)
-
+            val mainImg = itemView.findViewById<ImageView>(R.id.choiceImg)
             val formattedDate = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(
                 Date()
             )
@@ -159,6 +162,16 @@ class ComunityActivity : AppCompatActivity() {
             postTitleView.text = "제목 : ${post.title}"
             postContentTextView.text = "작성자 : ${post.author}"
             postFullContentTextView.text ="내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
+
+            mainImg.setImageResource(when(post.selectedImg) {
+                1 -> R.drawable.cuvi
+                2 -> R.drawable.mario
+                3 -> R.drawable.sonic1
+                4 -> R.drawable.sonic2
+                else -> R.drawable.cuvi
+            })
+
+
 
             itemView.setOnClickListener {
                 postFullContentTextView.visibility = View.VISIBLE
