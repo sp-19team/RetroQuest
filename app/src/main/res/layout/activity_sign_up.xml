@@ -34,9 +34,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/cuvi"
+
             android:layout_width="87dp"
-            android:layout_height="95dp"
+            android:layout_height="75dp"
             android:src="@drawable/cuvi"
             tools:layout_editor_absoluteX="20dp"
             tools:layout_editor_absoluteY="296dp"
@@ -44,17 +44,17 @@
             />
 
         <ImageView
-            android:id="@+id/mario"
+
             android:layout_width="87dp"
-            android:layout_height="95dp"
+            android:layout_height="75dp"
             android:src="@drawable/mario"
 
             />
 
         <ImageView
-            android:id="@+id/sonic"
+
             android:layout_width="87dp"
-            android:layout_height="95dp"
+            android:layout_height="75dp"
             android:background="@drawable/sonic1"
             tools:layout_editor_absoluteX="214dp"
             tools:layout_editor_absoluteY="296dp"
@@ -62,9 +62,9 @@
             />
 
         <ImageView
-            android:id="@+id/sonic2"
+
             android:layout_width="87dp"
-            android:layout_height="95dp"
+            android:layout_height="75dp"
             android:src="@drawable/sonic2"
             tools:layout_editor_absoluteX="117dp"
             tools:layout_editor_absoluteY="296dp"
@@ -73,19 +73,58 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
 
         <RadioGroup
+            android:id="@+id/groupRadio"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/cuvi"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="35dp"
+                android:text="커비"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/mario"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:text="마리오"/>
+            <RadioButton
+                android:id="@+id/sonic"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:text="소닉"/>
+            <RadioButton
+                android:id="@+id/sonic2"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:text="테일즈"/>
+
 
         </RadioGroup>
+
+
     </LinearLayout>
+
+
+
+
 
     <TextView
         android:id="@+id/textView3"
@@ -161,6 +200,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="45dp"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

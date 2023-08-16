@@ -8,22 +8,23 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.RadioButton
 import android.widget.Toast
 
 class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-        val cuviImg = findViewById<ImageView>(R.id.cuvi)
-        val marioImg = findViewById<ImageView>(R.id.mario)
-        var sonicImg = findViewById<ImageView>(R.id.sonic)
-        val sonicImg2 = findViewById<ImageView>(R.id.sonic2)
+        val cuviImg = findViewById<RadioButton>(R.id.cuvi)
+        val marioImg = findViewById<RadioButton>(R.id.mario)
+        var sonicImg = findViewById<RadioButton>(R.id.sonic)
+        val sonicImg2 = findViewById<RadioButton>(R.id.sonic2)
 
 
         val signUpBtn = findViewById<Button>(R.id.inSignUpBtn)
 
         var imgInt = 0
-        var state = 0
+
 
         cuviImg.setOnClickListener {
             imgInt = 1
