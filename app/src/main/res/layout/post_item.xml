@@ -4,28 +4,55 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp">
-
-    <TextView
-        android:id="@+id/postTitleTextView"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="게시물 제목"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/postContentTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="2"
-        android:text="게시물 내용 (간략)" />
 
-    <TextView
-        android:id="@+id/postFullContentTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="10"
-        android:visibility="gone"
-        android:text="게시물 전체 내용 (클릭 시 보임)" />
+        <ImageView
+            android:id="@+id/choiceImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:fontFamily="@font/ramche"
+            android:id="@+id/postTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="게시물 제목"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/postContentTextView"
+            android:fontFamily="@font/ramche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="게시물 내용 (간략)" />
+
+        <TextView
+            android:id="@+id/postFullContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="10"
+            android:visibility="gone"
+            android:fontFamily="@font/ramche"
+            android:text="게시물 전체 내용 (클릭 시 보임)" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#2A090808"/>
+
+
+
 
 </LinearLayout>
