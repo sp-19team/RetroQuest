@@ -34,7 +34,7 @@ class ComunityActivity : AppCompatActivity() {
         moveLinear = findViewById<LinearLayout>(R.id.moveLinear)
         startAnimation()
 
-
+        //gif두개 설정한거임 ㅋㅋ_ㅋ
         val gifImageView = findViewById<ImageView>(R.id.alertIcon)
         val gifDrawable = GifDrawable(resources, R.drawable.alert)
         gifImageView.setImageDrawable(gifDrawable)
@@ -97,10 +97,8 @@ class ComunityActivity : AppCompatActivity() {
         super.onResume()
         startAnimation()
 
-
+//혹시모르니깐 임의로 나둔거 나중에 최종일 때 삭제예정
 //        val postListLayout = findViewById<LinearLayout>(R.id.postListLayout)
-
-
 
 //         val inflater = LayoutInflater.from(this)
 //        for (post in postList){
