@@ -197,7 +197,6 @@
             app:layout_constraintVertical_bias="0.499"
             tools:ignore="MissingConstraints" />
 
-
         <Button
             android:id="@+id/detailUsersBtn2"
             android:layout_width="120dp"

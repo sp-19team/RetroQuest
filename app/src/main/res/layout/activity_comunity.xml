@@ -11,52 +11,98 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/profileback2"
             android:orientation="vertical">
 
-            <!-- 공지사항 -->
+
             <TextView
+                android:fontFamily="@font/ramche"
                 android:id="@+id/noticeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="공지사항"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/noticeContentTextView"
+            <LinearLayout
+                android:id="@+id/moveLinear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="공지사항 내용"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
 
-            <!-- 글쓰기 버튼 -->
-            <Button
-                android:id="@+id/writePostButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="글쓰기"
-                android:layout_gravity="end|top"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp" />
+                <ImageView
+                    android:id="@+id/alertIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/alert" />
 
+                <TextView
+                    android:fontFamily="@font/ramche"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:id="@+id/noticeContentTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="이번주 안에 알고리즘 LV.1 완료시 엄청난 보상" />
+                <ImageView
+                    android:id="@+id/alertIcon2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/alert" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="180dp"
+                    android:fontFamily="@font/ramche"
+                    android:textColor="@color/black"
+                    android:text="게시판"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/writePostButton"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/writen" />
+            </LinearLayout>
             <!-- 게시물 리스트 -->
             <LinearLayout
                 android:id="@+id/postListLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/profileback2"
+                android:orientation="vertical" />
 
         </LinearLayout>
     </ScrollView>
