@@ -4,6 +4,203 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".SignUpActivity"
+    android:background="@drawable/loginback">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/ramche"
+        android:text="캐릭터 선택"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="87dp"
+            android:layout_height="75dp"
+            android:src="@drawable/cuvi"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="296dp"
+
+            />
+
+        <ImageView
+
+            android:layout_width="87dp"
+            android:layout_height="75dp"
+            android:src="@drawable/mario"
+
+            />
+
+        <ImageView
+
+            android:layout_width="87dp"
+            android:layout_height="75dp"
+            android:background="@drawable/sonic1"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="296dp"
+
+            />
+
+        <ImageView
+
+            android:layout_width="87dp"
+            android:layout_height="75dp"
+            android:src="@drawable/sonic2"
+            tools:layout_editor_absoluteX="117dp"
+            tools:layout_editor_absoluteY="296dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/groupRadio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/cuvi"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="35dp"
+                android:text="커비"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/mario"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:text="마리오"/>
+            <RadioButton
+                android:id="@+id/sonic"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:text="소닉"/>
+            <RadioButton
+                android:id="@+id/sonic2"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/white"
+                android:text="테일즈"/>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/ramche"
+        android:text="아이디"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <EditText
+        android:id="@+id/signUpEditTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/ramche"
+        android:singleLine="true"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/ramche"
+        android:text="비밀번호"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.738" />
+
+    <EditText
+        android:id="@+id/signUpEditTextPw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/ramche"
+        android:singleLine="true"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832" />
+
+    <Button
+        android:id="@+id/inSignUpBtn"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/ramche"
+
+        android:text="회원가입"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="45dp"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
