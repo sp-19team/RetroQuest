@@ -98,13 +98,13 @@
 
         <Button
             android:id="@+id/loginBtn"
-            android:layout_width="150dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
 
             android:background="@drawable/button"
             android:fontFamily="@font/ramche"
-            android:text="Play Game"
-            android:textColor="@color/white"
+            android:text="START"
+            android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -113,14 +113,14 @@
 
         <Button
             android:id="@+id/signUpBtn"
-            android:layout_width="150dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
 
             android:layout_marginStart="20dp"
             android:background="@drawable/button"
             android:fontFamily="@font/ramche"
             android:text="New Player"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp"
 
             app:layout_constraintBottom_toBottomOf="parent"
