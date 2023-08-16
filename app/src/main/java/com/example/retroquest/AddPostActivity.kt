@@ -24,7 +24,7 @@ class AddPostActivity : AppCompatActivity() {
             val author = authorEditText.text.toString()
             val content = contentEditText.text.toString()
 
-            val curentDate = SimpleDateFormat("YYYY=MM-DD", Locale.getDefault()).format(Date())
+            val curentDate = SimpleDateFormat("YYYY-MM-DD", Locale.getDefault()).format(Date())
 
 
             val intent  = Intent(this,ComunityActivity::class.java)
