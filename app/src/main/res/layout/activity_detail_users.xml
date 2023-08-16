@@ -171,8 +171,10 @@
         android:id="@+id/comuBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="게시판이동"
+        android:background="@drawable/menuimg"
+
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        tools:layout_editor_absoluteX="161dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

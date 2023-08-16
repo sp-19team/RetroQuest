@@ -1,23 +1,101 @@
 package com.example.retroquest
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.ObjectAnimator
 import android.app.Activity
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import android.icu.text.SimpleDateFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import pl.droidsonroids.gif.GifDrawable
 import java.util.Date
 import java.util.Locale
 
 class ComunityActivity : AppCompatActivity() {
    private val postList = mutableListOf<PostData>()
+    private lateinit var moveLinear: View
+
+    private var isAnimating = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comunity)
+
+        moveLinear = findViewById<LinearLayout>(R.id.moveLinear)
+        startAnimation()
+
+
+        val gifImageView = findViewById<ImageView>(R.id.alertIcon)
+        val gifDrawable = GifDrawable(resources, R.drawable.alert)
+        gifImageView.setImageDrawable(gifDrawable)
+        gifDrawable.start()
+
+        val gifImageView2 =findViewById<ImageView>(R.id.alertIcon2)
+        val gifDrawable2 = GifDrawable(resources, R.drawable.alert)
+        gifImageView2.setImageDrawable(gifDrawable2)
+        gifDrawable2.start()
+    }
+
+
+
+
+
+
+    private fun startAnimation() {
+        if (isAnimating) return
+        isAnimating = true
+
+        animateNoticeTextView(0f, 1000f)
+    }
+
+    private fun animateNoticeTextView(startX: Float, endX: Float) {
+        moveLinear.translationX = startX
+        moveLinear.alpha = 1f
+        moveLinear.animate()
+            .translationX(endX)
+            .alpha(0f)
+            .setDuration(7000) // 애니메이션 지속 시간을 조정해 천천히 진행하도록 설정
+            .withEndAction {
+                if (!isFinishing) {
+                    moveLinear.translationX = -1000f
+                    animateBackIn()
+                }
+            }
+            .start()
+    }
+
+    private fun animateBackIn() {
+        moveLinear.alpha = 1f
+        moveLinear.animate()
+            .translationX(0f)
+            .setDuration(6000) // 애니메이션 지속 시간을 조정해 천천히 진행하도록 설정
+            .withEndAction {
+                if (!isFinishing) {
+                    animateNoticeTextView(0f, 1000f)
+                }
+            }
+            .start()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        moveLinear.clearAnimation()
+        isAnimating = false
+    }
+
+    override fun onResume() {
+        super.onResume()
+        startAnimation()
 
 
 //        val postListLayout = findViewById<LinearLayout>(R.id.postListLayout)
@@ -48,6 +126,8 @@ class ComunityActivity : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_ADD_POST)
         }
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
