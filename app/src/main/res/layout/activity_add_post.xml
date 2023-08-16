@@ -53,6 +53,7 @@
         android:fontFamily="@font/ramche"
         android:hint="제목"
         android:paddingStart="10dp"
+
         app:layout_constraintBottom_toBottomOf="@+id/authorEditText"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="51dp" />
@@ -118,28 +119,28 @@
         android:id="@+id/cuvi"
         android:layout_width="87dp"
         android:layout_height="75dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/cuvi"
+        android:src="@drawable/sonci3"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/authorEditText" />
+
 
     <ImageView
         android:id="@+id/mario"
         android:layout_width="87dp"
         android:layout_height="75dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/mario"
+        android:src="@drawable/mario2"
         app:layout_constraintStart_toEndOf="@id/cuvi"
         app:layout_constraintTop_toBottomOf="@id/authorEditText" />
-
 
     <ImageView
         android:layout_width="87dp"
         android:layout_height="75dp"
-        android:src="@drawable/sonic1"
+        android:src="@drawable/picachu"
         app:layout_constraintTop_toBottomOf="@id/authorEditText"
         app:layout_constraintStart_toEndOf="@id/mario"
         android:layout_marginStart="8dp"
@@ -149,7 +150,7 @@
     <ImageView
         android:layout_width="87dp"
         android:layout_height="75dp"
-        android:src="@drawable/sonic2"
+        android:src="@drawable/cuvi2"
         app:layout_constraintTop_toBottomOf="@id/authorEditText"
         app:layout_constraintStart_toEndOf="@id/sonic1"
         android:layout_marginStart="8dp"
@@ -173,7 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/ramche"
-            android:text="커비"
+            android:text="쏘닉"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.092"
@@ -197,9 +198,9 @@
             android:id="@+id/sonicBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="25dp"
             android:fontFamily="@font/ramche"
-            android:text="소닉"
+            android:text="피카뚱"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.653"
@@ -210,9 +211,9 @@
             android:id="@+id/sonic2Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="15dp"
             android:fontFamily="@font/ramche"
-            android:text="테일즈"
+            android:text="뚱커비"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.932"

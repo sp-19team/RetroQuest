@@ -36,15 +36,27 @@ class ComunityActivity : AppCompatActivity() {
 
         //gif두개 설정한거임 ㅋㅋ_ㅋ
         val gifImageView = findViewById<ImageView>(R.id.alertIcon)
-        val gifDrawable = GifDrawable(resources, R.drawable.alert)
+        val gifDrawable = GifDrawable(resources, R.drawable.star)
         gifImageView.setImageDrawable(gifDrawable)
         gifDrawable.start()
 
         val gifImageView2 =findViewById<ImageView>(R.id.alertIcon2)
-        val gifDrawable2 = GifDrawable(resources, R.drawable.alert)
+        val gifDrawable2 = GifDrawable(resources, R.drawable.star)
         gifImageView2.setImageDrawable(gifDrawable2)
         gifDrawable2.start()
 
+        val weather = findViewById<ImageView>(R.id.weather)
+
+        val weatherList = mutableListOf(
+            R.drawable.weather1,
+            R.drawable.weather2,
+            R.drawable.weather3,
+            R.drawable.weather4,
+            R.drawable.weather5,
+            R.drawable.weather6,
+        )
+        val randomImage = weatherList.random()
+        weather.setImageResource(randomImage)
 
     }
 
@@ -65,7 +77,7 @@ class ComunityActivity : AppCompatActivity() {
         moveLinear.alpha = 1f
         moveLinear.animate()
             .translationX(endX)
-            .alpha(0f)
+            .alpha(1f)
             .setDuration(7000) // 애니메이션 지속 시간을 조정해 천천히 진행하도록 설정
             .withEndAction {
                 if (!isFinishing) {
@@ -79,7 +91,7 @@ class ComunityActivity : AppCompatActivity() {
     private fun animateBackIn() {
         moveLinear.alpha = 1f
         moveLinear.animate()
-            .translationX(0f)
+            .translationX(1f)
             .setDuration(6000) // 애니메이션 지속 시간을 조정해 천천히 진행하도록 설정
             .withEndAction {
                 if (!isFinishing) {
@@ -164,10 +176,10 @@ class ComunityActivity : AppCompatActivity() {
             postFullContentTextView.text ="내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
 
             mainImg.setImageResource(when(post.selectedImg) {
-                1 -> R.drawable.cuvi
-                2 -> R.drawable.mario
-                3 -> R.drawable.sonic1
-                4 -> R.drawable.sonic2
+                1 -> R.drawable.sonci3
+                2 -> R.drawable.mario2
+                3 -> R.drawable.picachu
+                4 -> R.drawable.cuvi2
                 else -> R.drawable.cuvi
             })
 
