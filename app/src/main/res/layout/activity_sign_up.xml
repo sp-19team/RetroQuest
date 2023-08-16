@@ -193,6 +193,8 @@
         android:layout_width="210dp"
         android:layout_height="50dp"
         android:fontFamily="@font/ramche"
+        android:background="@drawable/button"
+        android:textColor="@color/white"
 
         android:text="회원가입"
         android:textSize="30dp"
