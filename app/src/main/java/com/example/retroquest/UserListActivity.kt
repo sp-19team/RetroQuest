@@ -11,7 +11,7 @@ class UserListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_list)
 
         val user1 = UserData("박세준", 29, "ISTP")
-        val user2 = UserData("킹왕짱", 12, "ENTJ")
+        val user2 = UserData("킹왕쨩", 12, "ENTJ")
 
         val detailUsersBtn1 = findViewById<Button>(R.id.detailUsersBtn1)
         detailUsersBtn1.setOnClickListener {
