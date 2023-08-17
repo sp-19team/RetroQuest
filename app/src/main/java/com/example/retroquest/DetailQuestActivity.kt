@@ -19,10 +19,7 @@ class DetailQuestActivity : AppCompatActivity() {
         }
 
 
-
-        val questcheck = findViewById<CheckBox>(R.id.questcheck)
-
-        val questText = findViewById<TextView>(R.id.questtext)
-
     }
 }
+
+
