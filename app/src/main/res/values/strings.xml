@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">RetroQuest</string>
+    <string name="app_name" translatable="false">RetroQuest</string>
+    <string name="id">아이디</string>
+    <string name="pw">비밀번호</string>
+    <string name="start" translatable="false">START</string>
+    <string name="new_player" translatable="false">New Player</string>
+    <string name="choose_char">캐릭터 선택</string>
 </resources>
