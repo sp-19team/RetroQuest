@@ -17,7 +17,7 @@
 
         android:layout_marginTop="252dp"
         android:foregroundGravity="center"
-        android:src="@drawable/cuvi"
+        android:src="@drawable/list_cat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
