@@ -1,5 +1,6 @@
 package com.example.retroquest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -72,6 +73,12 @@ class DetailUsersActivity : AppCompatActivity() {
                 gitgubLevel++
                 githubTextView.text = "github : ${gitgubLevel}/100"
             }
+        }
+
+        val comu = findViewById<Button>(R.id.comuBtn)
+        comu.setOnClickListener {
+            val intent = Intent(this,ComunityActivity::class.java)
+            startActivity(intent)
         }
 
     }
