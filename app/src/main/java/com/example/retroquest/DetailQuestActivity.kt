@@ -20,7 +20,7 @@ class DetailQuestActivity : AppCompatActivity() {
 
         var questModify = findViewById<Button>(R.id.modify)
         questModify.setOnClickListener {
-            val intent = Intent(this,/* 내용수정페이지 */::class.java)
+            val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
 
