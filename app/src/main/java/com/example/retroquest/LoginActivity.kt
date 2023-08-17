@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -51,9 +52,20 @@ class LoginActivity : AppCompatActivity() {
 
         // 시작 버튼 눌렸을 때 main화면 실행
         val login = findViewById<Button>(R.id.loginBtn)
+
+
+
         login.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val loginId = loginText.text.toString()
+            val loginPw = pwText.text.toString()
+            if (loginId.isNotEmpty() && loginPw.isNotEmpty()){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+
+            }else {
+                Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
         // 회원가입 버튼 눌렸을 때 signUp화면 실행
