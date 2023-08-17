@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val quest1 = QuestData("lv.1 알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트")
+        val quest1 = QuestData("알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트")
         val quest2 = QuestData("팀 프로젝트", "팀 프로젝트를 완성합니다.", "주간 퀘스트")
         val quest3 = QuestData("TIL 작성", "TIL을 작성합니다.", "일일 퀘스트")
         val quest4 = QuestData("WIL 작성","WIL을 작성합니다.","주간 퀘스트")
