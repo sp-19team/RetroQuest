@@ -91,7 +91,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="36dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="알고리즘 테스트"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll2"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +103,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="lv.1 알고리즘 문제를 3회 풉니다."
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll2"
                     app:layout_constraintTop_toBottomOf="@+id/quesTtitle2" />
@@ -112,10 +112,10 @@
                     android:id="@+id/questtype2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="24dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="일일 퀘스트"
                     app:layout_constraintBottom_toTopOf="@+id/questmini2"
                     app:layout_constraintStart_toEndOf="@+id/quesTtitle2" />
 
@@ -166,7 +166,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="36dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="팀프로젝트"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll1"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -178,7 +178,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="팀프로젝트를 완성합니다. 화이팅 화이팅!"
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll1"
                     app:layout_constraintTop_toBottomOf="@+id/quesTtitle1" />
@@ -190,7 +190,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="주간 퀘스트"
                     app:layout_constraintBottom_toTopOf="@+id/questmini1"
                     app:layout_constraintStart_toEndOf="@+id/quesTtitle1" />
 
@@ -241,7 +241,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="36dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="TIL 작성"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll5"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -253,7 +253,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="TIL을 작성합니다. 오늘 하루 어떻게 보내셨나요?"
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll5"
                     app:layout_constraintTop_toBottomOf="@+id/quesTtitle5" />
@@ -265,7 +265,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="일일 퀘스트"
                     app:layout_constraintBottom_toTopOf="@+id/questmini5"
                     app:layout_constraintStart_toEndOf="@+id/quesTtitle5" />
 
@@ -316,7 +316,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="36dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="WIL 작성"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll3"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -328,7 +328,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="WIL을 작성합니다. 이번 주는 얼마나 성취했나요?"
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll3"
                     app:layout_constraintTop_toBottomOf="@+id/quesTtitle3" />
@@ -340,7 +340,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="주간 퀘스트"
                     app:layout_constraintBottom_toTopOf="@+id/questmini3"
                     app:layout_constraintStart_toEndOf="@+id/quesTtitle3" />
 
@@ -391,7 +391,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="28dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="주간 KPT 작성"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll4"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -403,7 +403,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="이번 주는 어떤 문제가 있었고 어떤 것을 시도했나요?"
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll4"
                     app:layout_constraintTop_toTopOf="@+id/quesTtitle4" />
@@ -415,7 +415,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="TextView"
+                    android:text="주간 퀘스트"
                     app:layout_constraintBottom_toTopOf="@+id/questmini4"
                     app:layout_constraintStart_toEndOf="@+id/quesTtitle4" />
 
