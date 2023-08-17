@@ -44,8 +44,8 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
         imageList.add(R.drawable.pariy2)
         imageList.add(R.drawable.gobuk1)
         imageList.add(R.drawable.gobuk2)
-        imageList.add(R.drawable.esang)
-        imageList.add(R.drawable.esang2)
+        imageList.add(R.drawable.gobuk1)
+        imageList.add(R.drawable.gobuk2)
 
 
         imageList.shuffle()
