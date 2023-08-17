@@ -39,6 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="344dp"
         android:layout_height="621dp"
         android:layout_marginTop="20dp"
@@ -432,6 +433,19 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/ramche"
+        android:text="퀘스트 목록"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/userListBtn"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/questBtn"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
