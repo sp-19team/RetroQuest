@@ -21,9 +21,7 @@
 
     <Button
 
-       
 
- 
         android:id="@+id/userListBtn"
         android:layout_width="57dp"
         android:layout_height="57dp"
@@ -36,7 +34,7 @@
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#101010"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
