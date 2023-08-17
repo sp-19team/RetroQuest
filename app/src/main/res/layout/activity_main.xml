@@ -21,9 +21,7 @@
 
     <Button
 
-       
 
- 
         android:id="@+id/userListBtn"
         android:layout_width="57dp"
         android:layout_height="57dp"
@@ -36,7 +34,7 @@
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#101010"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,7 +57,158 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/questcard2">
+
+                <Button
+                    android:id="@+id/quest2"
+                    android:layout_width="341dp"
+                    android:layout_height="143dp"
+                    android:background="@drawable/blink"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/scroll2"
+                    android:layout_width="62dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.494"
+                    app:srcCompat="@drawable/quest3" />
+
+                <TextView
+                    android:id="@+id/quesTtitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="36dp"
+                    android:fontFamily="@font/ramche"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/scroll2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/questmini2"
+                    android:layout_width="147dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ramche"
+                    android:text="TextView"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/scroll2"
+                    app:layout_constraintTop_toBottomOf="@+id/quesTtitle2" />
+
+                <TextView
+                    android:id="@+id/questtype2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/ramche"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toTopOf="@+id/questmini2"
+                    app:layout_constraintStart_toEndOf="@+id/quesTtitle2" />
+
+                <ImageView
+                    android:id="@+id/questRseult2"
+                    android:layout_width="37dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/questmini2"
+                    app:layout_constraintTop_toBottomOf="@+id/questtype2"
+                    app:srcCompat="@drawable/quest2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/questcard2">
+
+                <Button
+                    android:id="@+id/quest1"
+                    android:layout_width="341dp"
+                    android:layout_height="143dp"
+                    android:background="@drawable/blink"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/scroll1"
+                    android:layout_width="62dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.494"
+                    app:srcCompat="@drawable/quest3" />
+
+                <TextView
+                    android:id="@+id/quesTtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="36dp"
+                    android:fontFamily="@font/ramche"
+                    android:text="TextView"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/scroll1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/questmini1"
+                    android:layout_width="147dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ramche"
+                    android:text="TextView"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/scroll1"
+                    app:layout_constraintTop_toBottomOf="@+id/quesTtitle1" />
+
+                <TextView
+                    android:id="@+id/questtype1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/ramche"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toTopOf="@+id/questmini1"
+                    app:layout_constraintStart_toEndOf="@+id/quesTtitle1" />
+
+                <ImageView
+                    android:id="@+id/questRseult1"
+                    android:layout_width="37dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/questmini1"
+                    app:layout_constraintTop_toBottomOf="@+id/questtype1"
+                    app:srcCompat="@drawable/quest2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/questcard2">
 
                 <Button
                     android:id="@+id/quest5"
@@ -68,30 +217,20 @@
                     android:background="@drawable/blink"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-
-                <ImageView
-                    android:id="@+id/questcard5"
-                    android:layout_width="346dp"
-                    android:layout_height="144dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:srcCompat="@drawable/questcard2" />
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
                     android:id="@+id/scroll5"
                     android:layout_width="62dp"
                     android:layout_height="52dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="44dp"
+                    android:layout_marginStart="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/questcard5"
+                    app:layout_constraintStart_toStartOf="@+id/quest5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.494"
                     app:srcCompat="@drawable/quest3" />
 
                 <TextView
@@ -104,19 +243,19 @@
                     android:text="TextView"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll5"
-                    app:layout_constraintTop_toTopOf="@+id/questcard5" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/questmini5"
                     android:layout_width="147dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
                     android:text="TextView"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/questcard5"
-                    app:layout_constraintStart_toEndOf="@+id/scroll5" />
+                    app:layout_constraintStart_toEndOf="@+id/scroll5"
+                    app:layout_constraintTop_toBottomOf="@+id/quesTtitle5" />
 
                 <TextView
                     android:id="@+id/questtype5"
@@ -143,7 +282,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/questcard2">
 
                 <Button
                     android:id="@+id/quest3"
@@ -152,30 +292,20 @@
                     android:background="@drawable/blink"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-
-                <ImageView
-                    android:id="@+id/questcard3"
-                    android:layout_width="346dp"
-                    android:layout_height="144dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:srcCompat="@drawable/questcard2" />
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
                     android:id="@+id/scroll3"
                     android:layout_width="62dp"
                     android:layout_height="52dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="44dp"
+                    android:layout_marginStart="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/questcard3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.494"
                     app:srcCompat="@drawable/quest3" />
 
                 <TextView
@@ -188,19 +318,19 @@
                     android:text="TextView"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll3"
-                    app:layout_constraintTop_toTopOf="@+id/questcard3" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/questmini3"
                     android:layout_width="147dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
                     android:text="TextView"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/questcard3"
-                    app:layout_constraintStart_toEndOf="@+id/scroll3" />
+                    app:layout_constraintStart_toEndOf="@+id/scroll3"
+                    app:layout_constraintTop_toBottomOf="@+id/quesTtitle3" />
 
                 <TextView
                     android:id="@+id/questtype3"
@@ -227,7 +357,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/questcard2">
 
                 <Button
                     android:id="@+id/quest4"
@@ -236,30 +367,20 @@
                     android:background="@drawable/blink"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-
-                <ImageView
-                    android:id="@+id/questcard4"
-                    android:layout_width="346dp"
-                    android:layout_height="144dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:srcCompat="@drawable/questcard2" />
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
                     android:id="@+id/scroll4"
                     android:layout_width="62dp"
                     android:layout_height="52dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="44dp"
+                    android:layout_marginStart="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/questcard4"
+                    app:layout_constraintStart_toStartOf="@+id/quest4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.494"
                     app:srcCompat="@drawable/quest3" />
 
                 <TextView
@@ -267,24 +388,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="28dp"
                     android:fontFamily="@font/ramche"
                     android:text="TextView"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll4"
-                    app:layout_constraintTop_toTopOf="@+id/questcard4" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/questmini4"
                     android:layout_width="147dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="32dp"
                     android:fontFamily="@font/ramche"
                     android:text="TextView"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/questcard4"
-                    app:layout_constraintStart_toEndOf="@+id/scroll4" />
+                    app:layout_constraintStart_toEndOf="@+id/scroll4"
+                    app:layout_constraintTop_toTopOf="@+id/quesTtitle4" />
 
                 <TextView
                     android:id="@+id/questtype4"
@@ -305,175 +426,6 @@
                     android:layout_marginTop="16dp"
                     app:layout_constraintStart_toEndOf="@+id/questmini4"
                     app:layout_constraintTop_toBottomOf="@+id/questtype4"
-                    app:srcCompat="@drawable/quest2" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/quest1"
-                    android:layout_width="341dp"
-                    android:layout_height="143dp"
-                    android:background="@drawable/blink"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-
-                <ImageView
-                    android:id="@+id/questcard1"
-                    android:layout_width="346dp"
-                    android:layout_height="144dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:srcCompat="@drawable/questcard2" />
-
-                <ImageView
-                    android:id="@+id/scroll1"
-                    android:layout_width="62dp"
-                    android:layout_height="52dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="44dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/questcard1"
-                    app:srcCompat="@drawable/quest3" />
-
-                <TextView
-                    android:id="@+id/quesTtitle1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="36dp"
-                    android:fontFamily="@font/ramche"
-                    android:text="TextView"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/scroll1"
-                    app:layout_constraintTop_toTopOf="@+id/questcard1" />
-
-                <TextView
-                    android:id="@+id/questmini"
-                    android:layout_width="147dp"
-                    android:layout_height="43dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="40dp"
-                    android:fontFamily="@font/ramche"
-                    android:text="TextView"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/questcard1"
-                    app:layout_constraintStart_toEndOf="@+id/scroll1"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-                <TextView
-                    android:id="@+id/questtype"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/ramche"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toTopOf="@+id/questmini"
-                    app:layout_constraintStart_toEndOf="@+id/quesTtitle1" />
-
-                <ImageView
-                    android:id="@+id/questRseult"
-                    android:layout_width="37dp"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toEndOf="@+id/questmini"
-                    app:layout_constraintTop_toBottomOf="@+id/questtype"
-                    app:srcCompat="@drawable/quest2" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/quest2"
-                    android:layout_width="341dp"
-                    android:layout_height="143dp"
-                    android:background="@drawable/blink"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-
-                <ImageView
-                    android:id="@+id/questcard2"
-                    android:layout_width="346dp"
-                    android:layout_height="144dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:srcCompat="@drawable/questcard2" />
-
-                <ImageView
-                    android:id="@+id/scroll2"
-                    android:layout_width="62dp"
-                    android:layout_height="52dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="44dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/questcard2"
-                    app:srcCompat="@drawable/quest3" />
-
-                <TextView
-                    android:id="@+id/quesTtitle2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="36dp"
-                    android:fontFamily="@font/ramche"
-                    android:text="TextView"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/scroll2"
-                    app:layout_constraintTop_toTopOf="@+id/questcard2" />
-
-                <TextView
-                    android:id="@+id/questmini2"
-                    android:layout_width="147dp"
-                    android:layout_height="43dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="40dp"
-                    android:fontFamily="@font/ramche"
-                    android:text="TextView"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/questcard2"
-                    app:layout_constraintStart_toEndOf="@+id/scroll2" />
-
-                <TextView
-                    android:id="@+id/questtype2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/ramche"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toTopOf="@+id/questmini2"
-                    app:layout_constraintStart_toEndOf="@+id/quesTtitle2" />
-
-                <ImageView
-                    android:id="@+id/questRseult2"
-                    android:layout_width="37dp"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toEndOf="@+id/questmini2"
-                    app:layout_constraintTop_toBottomOf="@+id/questtype2"
                     app:srcCompat="@drawable/quest2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
