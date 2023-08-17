@@ -11,7 +11,6 @@
 
 
 
-
    <Button
        android:id="@+id/modify"
        android:layout_width="150dp"
@@ -30,22 +29,7 @@
        android:layout_height="150dp"
        android:layout_marginTop="88dp"
        android:foregroundGravity="center"
-       android:src="@drawable/mario"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.512"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent" />
 
-   <CheckBox
-       android:id="@+id/questcheck"
-       android:layout_width="40dp"
-       android:layout_height="40dp"
-       android:layout_marginStart="6dp"
-       android:layout_marginEnd="365dp"
-       android:background="@drawable/mario"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/questbox" />
 
    <TextView
        android:id="@+id/questtext"
