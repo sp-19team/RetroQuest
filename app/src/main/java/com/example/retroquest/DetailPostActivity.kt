@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class DetailPostActivity : AppCompatActivity() {
+
+
     private var postList: MutableList<PostData> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,11 +54,28 @@ class DetailPostActivity : AppCompatActivity() {
 
 
         deleteButton.setOnClickListener {
-
+            val confirmDialog = AlertDialog.Builder(this)
+            confirmDialog.setTitle("게시물 삭제")
+            confirmDialog.setMessage("정말로 이 게시물을 삭제하시겠습니까?")
+            confirmDialog.setPositiveButton("확인") { _, _ ->
+                val deleteIntent = Intent()
+                deleteIntent.putExtra("MODE", "DELETE")
+                deleteIntent.putExtra("TITLE", title)
+                deleteIntent.putExtra("AUTHOR", author)
+                deleteIntent.putExtra("CONTENT", content)
+                deleteIntent.putExtra("IMAGE", selectedImg)
+                setResult(RESULT_OK, deleteIntent)
+                finish()
             }
+            confirmDialog.setNegativeButton("취소", null)
+            confirmDialog.show()
         }
+    }
+
+
 
 
 
     }
+
 

@@ -10,9 +10,13 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import pl.droidsonroids.gif.GifDrawable
 
 class DetailUsersActivity : AppCompatActivity() {
-    private var algorithmLevel = 0
-    private var kotlinLevel = 0
-    private var gitgubLevel = 0
+    private val maxAlgorithmImages = 4
+    private var currentImageIndex = 0
+    private val maxAlgorithmImages1 = 4
+    private var currentImageIndex1 = 0
+    private val maxAlgorithmImages2 = 4
+    private var currentImageIndex2 = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -41,9 +45,7 @@ class DetailUsersActivity : AppCompatActivity() {
         val nameTextView = findViewById<Button>(R.id.nameArea)
         val lvTextView = findViewById<TextView>(R.id.lvTextViewArea)
         val mbtiTextView = findViewById<TextView>(R.id.mbtiTextViewArea)
-        val algoTextView = findViewById<TextView>(R.id.algoTextViewArea)
-        val kotlinTextView = findViewById<TextView>(R.id.kotlinTextViewArea)
-        val githubTextView = findViewById<TextView>(R.id.githubTextViewArea)
+
 
         nameTextView.text = userData?.name
         lvTextView.text = "Lv : ${userData?.lv}"
@@ -52,28 +54,40 @@ class DetailUsersActivity : AppCompatActivity() {
 
 
 
-        val plusButton = findViewById<Button>(R.id.plusBtn)
-        plusButton.setOnClickListener {
-            if (algorithmLevel < 100) {
-                algorithmLevel++
-                algoTextView.text = "algorithm : $algorithmLevel/100"
+        val algoImageView1 = findViewById<ImageView>(R.id.picArea)
+        updateAlgorithmImage(currentImageIndex, algoImageView1)
+
+        val plusButton1 = findViewById<Button>(R.id.plusBtn)
+        plusButton1.setOnClickListener {
+            if (currentImageIndex < maxAlgorithmImages - 1) {
+                currentImageIndex++
+                updateAlgorithmImage(currentImageIndex, algoImageView1)
             }
         }
 
-            val plusButton2 =findViewById<Button>(R.id.plusBtn2)
-            plusButton2.setOnClickListener {
-                if (kotlinLevel<100){
-                    kotlinLevel++
-                    kotlinTextView.text = " kotiln : ${kotlinLevel}/100"
-                }
-            }
-        val plusButton3 =findViewById<Button>(R.id.plusBtn3)
-        plusButton3.setOnClickListener {
-            if (gitgubLevel<100){
-                gitgubLevel++
-                githubTextView.text = "github : ${gitgubLevel}/100"
+        val algoImageView2 = findViewById<ImageView>(R.id.picArea2)
+        updateAlgorithmImage2(currentImageIndex1, algoImageView2)
+
+        val plusButton2 = findViewById<Button>(R.id.plusBtn2)
+        plusButton2.setOnClickListener {
+            if (currentImageIndex1 < maxAlgorithmImages1 - 1) {
+                currentImageIndex1++
+                updateAlgorithmImage2(currentImageIndex1, algoImageView2)
             }
         }
+
+        val algoImageView3 = findViewById<ImageView>(R.id.picArea3)
+        updateAlgorithmImage3(currentImageIndex2, algoImageView3)
+
+        val plusButton3 = findViewById<Button>(R.id.plusBtn3)
+        plusButton3.setOnClickListener {
+            if (currentImageIndex2 < maxAlgorithmImages2 - 1) {
+                currentImageIndex2++
+                updateAlgorithmImage3(currentImageIndex2, algoImageView3)
+            }
+        }
+
+
 
         val comu = findViewById<Button>(R.id.comuBtn)
         comu.setOnClickListener {
@@ -81,5 +95,38 @@ class DetailUsersActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+    private fun updateAlgorithmImage(index: Int, imageView: ImageView) {
+        val imageResource = when (index) {
+            0 -> R.drawable.pic1
+            1 -> R.drawable.pic2
+            2 -> R.drawable.pic3
+            3 -> R.drawable.pic4
+            else -> R.drawable.pic1
+        }
+
+        imageView.setImageResource(imageResource)
+    }
+    private fun updateAlgorithmImage2(index: Int, imageView: ImageView) {
+        val imageResource2 = when (index) {
+            0 -> R.drawable.pic1
+            1 -> R.drawable.pic2
+            2 -> R.drawable.pic3
+            3 -> R.drawable.pic4
+            else -> R.drawable.pic1
+        }
+
+        imageView.setImageResource(imageResource2)
+    }
+    private fun updateAlgorithmImage3(index: Int, imageView: ImageView) {
+        val imageResource3 = when (index) {
+            0 -> R.drawable.pic1
+            1 -> R.drawable.pic2
+            2 -> R.drawable.pic3
+            3 -> R.drawable.pic4
+            else -> R.drawable.pic1
+        }
+
+        imageView.setImageResource(imageResource3)
     }
 }

@@ -21,9 +21,12 @@ class AddPostActivity : AppCompatActivity() {
 
 
 
+
         val titleEditText = findViewById<EditText>(R.id.titleEditText)
         val authorEditText = findViewById<EditText>(R.id.authorEditText)
         val contentEditText = findViewById<EditText>(R.id.contentEditText)
+
+
 
         val submitBtn = findViewById<Button>(R.id.submitButton)
         submitBtn.setOnClickListener {

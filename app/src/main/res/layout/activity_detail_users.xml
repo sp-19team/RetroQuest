@@ -101,7 +101,7 @@
             app:layout_constraintHorizontal_bias="0.983"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.773" />
+            app:layout_constraintVertical_bias="0.791" />
 
         <Button
             android:id="@+id/plusBtn2"
@@ -113,7 +113,7 @@
             app:layout_constraintHorizontal_bias="0.983"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.878" />
+            app:layout_constraintVertical_bias="0.965" />
 
         <Button
             android:id="@+id/plusBtn3"
@@ -125,19 +125,55 @@
             app:layout_constraintHorizontal_bias="0.983"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.982" />
+            app:layout_constraintVertical_bias="0.878" />
+
 
         <TextView
             android:id="@+id/algoTextViewArea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/ramche"
-            android:text="algorithm : 0 "
+            android:text="algorithm"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.37"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/statBtnArea" />
+
+        <ImageView
+            android:id="@+id/picArea"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="64dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.827" />
+
+        <ImageView
+            android:id="@+id/picArea2"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="64dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/picArea3"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="64dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.904" />
 
         <TextView
             android:id="@+id/kotlinTextViewArea"
@@ -145,10 +181,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:fontFamily="@font/ramche"
-            android:text="kotlin : 0"
+            android:text="kotlin"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.377"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/statBtnArea" />
 
@@ -156,12 +193,13 @@
             android:id="@+id/githubTextViewArea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="88dp"
             android:fontFamily="@font/ramche"
-            android:text="github : 0"
+            android:text="github"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/statBtnArea" />
 
