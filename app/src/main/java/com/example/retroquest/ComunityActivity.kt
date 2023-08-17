@@ -23,7 +23,12 @@ import java.util.Date
 import java.util.Locale
 
 class ComunityActivity : AppCompatActivity() {
+    companion object {
+        const val REQUEST_ADD_POST = 1
+
+    }
    private val postList = mutableListOf<PostData>()
+
     private lateinit var moveLinear: View
 
     private var isAnimating = false
@@ -111,26 +116,7 @@ class ComunityActivity : AppCompatActivity() {
         super.onResume()
         startAnimation()
 
-//혹시모르니깐 임의로 나둔거 나중에 최종일 때 삭제예정
-//        val postListLayout = findViewById<LinearLayout>(R.id.postListLayout)
 
-//         val inflater = LayoutInflater.from(this)
-//        for (post in postList){
-//            val itemView = inflater.inflate(R.layout.post_item,postListLayout,false)
-//
-//            val postTitleView =itemView.findViewById<TextView>(R.id.postTitleTextView)
-//            val postContentTextView = itemView.findViewById<TextView>(R.id.postContentTextView)
-//            val postFullContentTextView = itemView.findViewById<TextView>(R.id.postFullContentTextView)
-//
-//            postTitleView.text =post.title
-//            postContentTextView.text = post.author
-//            postFullContentTextView.text = post.fullContent
-//
-//            itemView.setOnClickListener{
-//                postFullContentTextView.visibility  = View.VISIBLE
-//            }
-//            postListLayout.addView(itemView)
-//        }
 
         val writeBtn = findViewById<Button>(R.id.writePostButton)
         writeBtn.setOnClickListener {
@@ -148,19 +134,16 @@ class ComunityActivity : AppCompatActivity() {
             val author = data?.getStringExtra("AUTHOR")
             val content = data?.getStringExtra("CONTENT")
             val date = data?.getStringExtra("DATE")
-            val selectedImg = data?.getIntExtra("IMAGE",0)
+            val selectedImg = data?.getIntExtra("IMAGE", 0)
 
-
-
-            postList.add(PostData(title!!, author!!, content!!, date!!,selectedImg!!)) // 리스트에 아이템 추가
-
+            postList.add(PostData(title!!, author!!, content!!, date!!, selectedImg!!)) // 리스트에 아이템 추가
             updatePostList(selectedImg) // 아이템 목록 갱신
         }
     }
 
     private fun updatePostList(selectedImg: Int) {
         val postListLayout = findViewById<LinearLayout>(R.id.postListLayout)
-         postListLayout.removeAllViews()
+        postListLayout.removeAllViews()
 
         val inflater = LayoutInflater.from(this)
         for (post in postList) {
@@ -175,17 +158,15 @@ class ComunityActivity : AppCompatActivity() {
 
             postTitleView.text = "제목 : ${post.title}"
             postContentTextView.text = "작성자 : ${post.author}"
-            postFullContentTextView.text ="내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
+            postFullContentTextView.text = "내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
 
-            mainImg.setImageResource(when(post.selectedImg) {
+            mainImg.setImageResource(when (post.selectedImg) {
                 1 -> R.drawable.sonci3
                 2 -> R.drawable.mario2
                 3 -> R.drawable.picachu
                 4 -> R.drawable.cuvi2
                 else -> R.drawable.cuvi
             })
-
-
 
             itemView.setOnClickListener {
                 val intent = Intent(this, DetailPostActivity::class.java)
@@ -198,10 +179,5 @@ class ComunityActivity : AppCompatActivity() {
             }
             postListLayout.addView(itemView)
         }
-    }
-
-    companion object {
-        const val REQUEST_ADD_POST = 1
-
     }
 }
