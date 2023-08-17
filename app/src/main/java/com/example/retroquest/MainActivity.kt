@@ -20,17 +20,15 @@ import java.util.Date
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
+
+    private val questList = mutableListOf<questData>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        private val questList = mutableListOf<questData>()
 
-
-
-
-        var detailQuest = findViewById<Button>(R.id.questBtn)
-        detailQuest.setOnClickListener {
+        var Quest = findViewById<Button>(R.id.questBtn)
+        Quest.setOnClickListener {
             val intent = Intent(this,DetailQuestActivity::class.java)
             startActivity(intent)
         }
@@ -40,9 +38,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,UserListActivity::class.java)
             startActivity(intent)
         }
+
+        val questIds = arrayOf(R.id.quest1, R.id.quest2, R.id.quest3, R.id.quest4, R.id.quest5)
+
+        for (questId in questIds) {
+            val detailQuest = findViewById<Button>(questId)
+            detailQuest.setOnClickListener {
+                val intent = Intent(this, DetailQuestActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+
     }
-
-
 }
 
 
