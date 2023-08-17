@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/questback"
+    android:background="@drawable/profileback"
     tools:context=".DetailQuestActivity">
 
 
@@ -27,8 +27,10 @@
        android:id="@+id/questbox"
        android:layout_width="400dp"
        android:layout_height="150dp"
-       android:layout_marginTop="88dp"
        android:foregroundGravity="center"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
 
 
 

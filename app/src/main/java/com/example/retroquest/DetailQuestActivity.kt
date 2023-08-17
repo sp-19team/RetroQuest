@@ -12,7 +12,7 @@ class DetailQuestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_quest)
 
-        var returnMain = findViewById<Button>(R.id.returnmain)
+        var returnMain = findViewById<Button>(R.id.modify)
         returnMain.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
