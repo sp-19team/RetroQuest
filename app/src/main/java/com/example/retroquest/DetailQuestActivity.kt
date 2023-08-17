@@ -18,15 +18,3 @@ class DetailQuestActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        var questModify = findViewById<Button>(R.id.modify)
-        questModify.setOnClickListener {
-            val intent = Intent(this,/* 내용수정페이지 */::class.java)
-            startActivity(intent)
-        }
-
-        val questcheck = findViewById<CheckBox>(R.id.questcheck)
-
-        val questText = findViewById<TextView>(R.id.questtext)
-
-    }
-}
