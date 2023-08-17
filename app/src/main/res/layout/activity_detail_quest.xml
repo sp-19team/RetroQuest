@@ -1,19 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/questback"
     tools:context=".DetailQuestActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/ramche"
-        android:text="메인퀘스트 페이지"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="306dp"
-        tools:ignore="MissingConstraints" />
+
+   <Button
+       android:id="@+id/returnmain"
+       android:layout_width="150dp"
+       android:layout_height="100dp"
+       android:background="@drawable/mario"
+       android:text="퀘스트메인"
+       tools:layout_editor_absoluteX="0dp"
+       tools:layout_editor_absoluteY="-2dp" />
+
+   <ImageView
+       android:id="@+id/detailquest"
+       android:layout_width="110dp"
+       android:layout_height="80dp"
+       android:foregroundGravity="center"
+       android:src="@drawable/quest3"
+       tools:layout_editor_absoluteX="150dp"
+       tools:layout_editor_absoluteY="-2dp" />
+
+   <Button
+       android:id="@+id/modify"
+       android:layout_width="150dp"
+       android:layout_height="100dp"
+       android:layout_marginStart="260dp"
+       android:layout_marginTop="4dp"
+       android:background="@drawable/mario"
+       android:text="수정"
+       app:layout_constraintHorizontal_bias="0.097"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <ImageView
+       android:id="@+id/questbox"
+       android:layout_width="400dp"
+       android:layout_height="150dp"
+       android:layout_marginTop="88dp"
+       android:foregroundGravity="center"
+       android:src="@drawable/"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.512"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <CheckBox
+       android:id="@+id/questcheck"
+       android:layout_width="40dp"
+       android:layout_height="40dp"
+       android:background="@drawable/mario"
+       tools:layout_editor_absoluteX="6dp"
+       tools:layout_editor_absoluteY="145dp" />
+
+   <TextView
+       android:id="@+id/questtext"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:fontFamily="@font/ramche"
+       android:text="퀘스트 세부내용"
+       tools:ignore="MissingConstraints"
+       tools:layout_editor_absoluteX="155dp"
+       tools:layout_editor_absoluteY="162dp" />
+
+   <ImageView
+       android:id="@+id/reward"
+       android:layout_width="100dp"
+       android:layout_height="80dp"
+       android:layout_marginTop="648dp"
+       android:foregroundGravity="center"
+       android:src="@drawable/mario"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.498"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
