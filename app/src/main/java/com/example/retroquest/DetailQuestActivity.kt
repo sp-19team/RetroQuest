@@ -18,3 +18,8 @@ class DetailQuestActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+    }
+}
+
+
