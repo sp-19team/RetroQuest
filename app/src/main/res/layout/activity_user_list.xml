@@ -182,13 +182,13 @@
 
 
         <Button
+
             android:id="@+id/detailUsersBtn1"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/userlist_button"
+            android:background="@drawable/play1"
             android:fontFamily="@font/ramche"
-            android:text="@string/detailView"
-
+            android:layout_marginStart="1dp"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -202,10 +202,9 @@
             android:id="@+id/detailUsersBtn2"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:background="@drawable/userlist_button"
+                        android:background="@drawable/play2"
             android:fontFamily="@font/ramche"
-            android:text="@string/detailView"
+            android:layout_marginStart="80dp"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -352,9 +351,9 @@
             android:id="@+id/detailUsersBtn3"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/userlist_button"
+            android:background="@drawable/play3"
             android:fontFamily="@font/ramche"
-            android:text="@string/detailView"
+
             android:textSize="20sp"
             tools:layout_editor_absoluteX="170dp"
             tools:layout_editor_absoluteY="667dp" />
@@ -362,11 +361,11 @@
         <Button
             android:id="@+id/detailUsersBtn4"
             android:layout_width="120dp"
-            android:layout_marginStart="35dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/userlist_button"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/play4"
             android:fontFamily="@font/ramche"
-            android:text="@string/detailView"
+
             android:textSize="20sp"
             tools:layout_editor_absoluteX="22dp"
             tools:layout_editor_absoluteY="671dp" />
