@@ -3,7 +3,10 @@ package com.example.retroquest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.DynamicLayout
+import android.widget.ArrayAdapter
 import android.widget.Button
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,5 +25,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,UserListActivity::class.java)
             startActivity(intent)
         }
+
+        }
     }
-}
+
+
