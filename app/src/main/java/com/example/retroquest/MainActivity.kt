@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val questIds = arrayOf(R.id.quest6, R.id.quest7, R.id.quest3, R.id.quest4, R.id.quest5)
+        val questIds = arrayOf(R.id.quest1, R.id.quest2, R.id.quest3, R.id.quest4, R.id.quest5)
 
         for (questId in questIds) {
             val detailQuest = findViewById<Button>(questId)
