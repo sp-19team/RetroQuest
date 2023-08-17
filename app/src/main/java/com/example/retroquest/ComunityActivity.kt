@@ -150,6 +150,8 @@ class ComunityActivity : AppCompatActivity() {
             val date = data?.getStringExtra("DATE")
             val selectedImg = data?.getIntExtra("IMAGE",0)
 
+
+
             postList.add(PostData(title!!, author!!, content!!, date!!,selectedImg!!)) // 리스트에 아이템 추가
 
             updatePostList(selectedImg) // 아이템 목록 갱신
@@ -186,7 +188,13 @@ class ComunityActivity : AppCompatActivity() {
 
 
             itemView.setOnClickListener {
-                postFullContentTextView.visibility = View.VISIBLE
+                val intent = Intent(this, DetailPostActivity::class.java)
+                intent.putExtra("TITLE", post.title)
+                intent.putExtra("AUTHOR", post.author)
+                intent.putExtra("CONTENT", post.fullContent)
+                intent.putExtra("DATE", formattedDate)
+                intent.putExtra("IMAGE", post.selectedImg)
+                startActivity(intent)
             }
             postListLayout.addView(itemView)
         }
@@ -194,5 +202,6 @@ class ComunityActivity : AppCompatActivity() {
 
     companion object {
         const val REQUEST_ADD_POST = 1
+
     }
 }
