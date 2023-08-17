@@ -91,7 +91,7 @@ class DetailUsersActivity : AppCompatActivity() {
 
         val comu = findViewById<Button>(R.id.comuBtn)
         comu.setOnClickListener {
-            val intent = Intent(this,ComunityActivity::class.java)
+            val intent = Intent(this,GameActivity::class.java)
             startActivity(intent)
         }
 
