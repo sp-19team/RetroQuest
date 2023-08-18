@@ -53,14 +53,13 @@ class LoginActivity : AppCompatActivity() {
         // 시작 버튼 눌렸을 때 main화면 실행
         val login = findViewById<Button>(R.id.loginBtn)
 
-
-
         login.setOnClickListener {
             val loginId = loginText.text.toString()
             val loginPw = pwText.text.toString()
             if (loginId.isNotEmpty() && loginPw.isNotEmpty()){
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
 
             }else {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
@@ -74,6 +73,7 @@ class LoginActivity : AppCompatActivity() {
         signUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             activityResultLauncher.launch(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
 
         }
 
