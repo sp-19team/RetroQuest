@@ -62,6 +62,7 @@ class DetailQuestActivity : AppCompatActivity() {
             checkAllQuestsCompleted()
         }
 
+
         // 퀘스트 완료 버튼
         complete1.setOnClickListener {
             if (allQuestsCompleted) {
