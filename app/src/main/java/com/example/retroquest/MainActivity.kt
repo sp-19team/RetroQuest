@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val quest2 = QuestData("팀 프로젝트", "팀 프로젝트를 완성합니다.", "주간 퀘스트")
         val quest3 = QuestData("TIL 작성", "TIL을 작성합니다.", "일일 퀘스트")
         val quest4 = QuestData("WIL 작성", "WIL을 작성합니다.", "주간 퀘스트")
-        val quest5 = QuestData("주간 KPT 작성하기", "KPT를 작성합니다.", "주간 퀘스트")
+        val quest5 = QuestData("코틀린 문법 학습", "코틀린 문법을 공부합니다.", "일일 퀘스트")
 
 
         val isQuestCompleted = intent.getBooleanExtra("QUEST_COMPLETED", false)
@@ -88,59 +88,50 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-//        val questIds = arrayOf(R.id.quest1, R.id.quest2, R.id.quest3, R.id.quest4, R.id.quest5)
-//
-//        for (questId in questIds) {
-//            val detailQuest = findViewById<Button>(questId)
-//            detailQuest.setOnClickListener {
-//                val questData = when (questId) {
-//                    R.id.quest1 -> quest1
-//                    R.id.quest2 -> quest2
-//                    R.id.quest3 -> quest3
-//                    R.id.quest4 -> quest4
-//                    R.id.quest5 -> quest5
-//                    else -> null
-//                }
-//
-//                if (questData != null) {
-//                    val intent = Intent(this, DetailQuestActivity::class.java)
-//                    intent.putExtra("QUESTDATA", questData)
-//                    startActivity(intent)
-//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//                }
-//            }
-//        }
-// 보상 선택시 토스트로 출력
-//        val resultbtn1 = findViewById<Button>(R.id.questResult1)
-//        resultbtn1.setOnClickListener {
-//            Toast.makeText(this, "보상은 ** 입니다.", Toast.LENGTH_SHORT).show()
-//        }
-//
-//        val resultbtn2 = findViewById<Button>(R.id.questResult2)
-//        resultbtn2.setOnClickListener {
-//            Toast.makeText(this, "보상은 ** 입니다.", Toast.LENGTH_SHORT).show()
-//        }
-//
-//        val resultbtn3 = findViewById<Button>(R.id.questResult3)
-//        resultbtn3.setOnClickListener {
-//            Toast.makeText(this, "보상은 ** 입니다.", Toast.LENGTH_SHORT).show()
-//        }
-//
-//        val resultbtn4 = findViewById<Button>(R.id.questResult4)
-//        resultbtn4.setOnClickListener {
-//            Toast.makeText(this, "보상은 ** 입니다.", Toast.LENGTH_SHORT).show()
-//        }
-//
-//        val resultbtn5 = findViewById<Button>(R.id.questResult5)
-//        resultbtn5.setOnClickListener {
-//            Toast.makeText(this, "보상은 ** 입니다.", Toast.LENGTH_SHORT).show()
-//        }
+        val reward1 = ResultData("알고리즘 +1" ,"자신감 +1","실력 +1")
+        val reward2 = ResultData("협동력 +1" ,"자신감 +1","실력 +1")
+        val reward3 = ResultData("성실함 +1" ,"자신감 +1","실력 +1")
+        val reward4 = ResultData("성실함 +1" ,"자신감 +1","실력 +1")
+        val reward5 = ResultData("코틀린 +1" ,"자신감 +1","실력 +1")
+
 
 // 보상 선택시 액티비티 전환
         val resultbtn1 = findViewById<Button>(R.id.questResult1)
         resultbtn1.setOnClickListener {
-            var intent = Intent(this, ResultActivity::class.java)
-//            intent putExtra("RESULTDATA", result1)
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("RESULTDATA", reward1)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val resultbtn2 = findViewById<Button>(R.id.questResult2)
+        resultbtn2.setOnClickListener {
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("RESULTDATA", reward2)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val resultbtn3 = findViewById<Button>(R.id.questResult3)
+        resultbtn3.setOnClickListener {
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("RESULTDATA", reward3)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val resultbtn4 = findViewById<Button>(R.id.questResult4)
+        resultbtn4.setOnClickListener {
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("RESULTDATA", reward4)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val resultbtn5 = findViewById<Button>(R.id.questResult5)
+        resultbtn5.setOnClickListener {
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("RESULTDATA", reward5)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }

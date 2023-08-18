@@ -1,8 +1,9 @@
 package com.example.retroquest
 
+import java.io.Serializable
+
 data class ResultData(
-    var title: String,
-    var type: String,
-    var dex: String,
-    var receive: Int
-    )
+    var message1: String,
+    var message2: String,
+    var message3: String
+) : Serializable
