@@ -7,4 +7,13 @@
     <string name="choose_char">캐릭터 선택</string>
     <string name="userList">유저리스트</string>
     <string name="detailView">상세 보기</string>
+    <string name="title">제목</string>
+    <string name="writer">작성자</string>
+    <string name="content">내용</string>
+    <string name="notice">공지사항</string>
+    <string name="notice_content">이번주 안에 알고리즘 LV.1 완료시 엄청난 보상</string>
+    <string name="today_weather">오늘의 날씨</string>
+    <string name="notice_board">게시판</string>
+    <string name="name">이름</string>
+    <string name="stat">능력치</string>
 </resources>

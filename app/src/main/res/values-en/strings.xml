@@ -5,4 +5,13 @@
     <string name="choose_char">Choose your Character</string>
     <string name="userList">UserList</string>
     <string name="detailView">SeeMore</string>
+    <string name="title">title</string>
+    <string name="writer">your name</string>
+    <string name="content">content</string>
+    <string name="notice">notice</string>
+    <string name="notice_content">Complete Algorithm Lv1 until this week. Then you will get a big reward!!</string>
+    <string name="today_weather">Weather</string>
+    <string name="notice_board">board</string>
+    <string name="name">name</string>
+    <string name="stat">stats</string>
 </resources>
