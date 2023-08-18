@@ -18,10 +18,16 @@
         android:textSize="35sp"
         android:textStyle="bold"
         />
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/gameimg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -159,17 +165,16 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30dp">
+    android:layout_marginTop="5dp">
 
     <Button
         android:id="@+id/resetBtn"
-        android:fontFamily="@font/ramche"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:gravity="center"
         android:background="@drawable/start1"
-         />
+        android:fontFamily="@font/ramche"
+        android:gravity="center" />
 </RelativeLayout>
 
 

@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import pl.droidsonroids.gif.GifDrawable
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,7 +25,11 @@ class LoginActivity : AppCompatActivity() {
         val mainImg = findViewById<ImageView>(R.id.profileImages)
 
 
-        //선택 이미지 보여주기
+        val gifImage =findViewById<ImageView>(R.id.profileImages)
+        val gifDrawable = GifDrawable(resources,R.drawable.movecat)
+        gifImage.setImageDrawable(gifDrawable)
+        gifDrawable.start()
+
 
 
         //signUp에서 정보 가져오기

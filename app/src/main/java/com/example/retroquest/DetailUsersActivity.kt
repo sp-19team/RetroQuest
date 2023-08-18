@@ -22,6 +22,13 @@ class DetailUsersActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_detail_users)
 
+        val game = findViewById<Button>(R.id.comuBtn)
+        game.setOnClickListener {
+            val intent = Intent(this,GameActivity::class.java)
+                       startActivity(intent)
+        }
+
+
 
         val userData = intent.getSerializableExtra("USERDATA") as? UserData
 
@@ -89,11 +96,6 @@ class DetailUsersActivity : AppCompatActivity() {
 
 
 
-        val comu = findViewById<Button>(R.id.comuBtn)
-        comu.setOnClickListener {
-            val intent = Intent(this,GameActivity::class.java)
-            startActivity(intent)
-        }
 
     }
     private fun updateAlgorithmImage(index: Int, imageView: ImageView) {

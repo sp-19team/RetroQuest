@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import pl.droidsonroids.gif.GifDrawable
 
 class GameActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -20,13 +22,21 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
+
+
+        val gifImage =findViewById<ImageView>(R.id.gameimg)
+        val gifDrawable = GifDrawable(resources,R.drawable.avocado)
+        gifImage.setImageDrawable(gifDrawable)
+        gifDrawable.start()
+
+
         resultText = findViewById(R.id.resultText)
         val resetButton = findViewById<Button>(R.id.resetBtn)
         resetButton.setOnClickListener {
             init()//셋팅
         }
         init()//셋팅
-    }//oncreate
+    }
 
     private fun init() {
 
