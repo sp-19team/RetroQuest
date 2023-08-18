@@ -32,7 +32,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="공지사항"
+                android:text="@string/notice"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="이번주 안에 알고리즘 LV.1 완료시 엄청난 보상" />
+                    android:text="@string/notice_content" />
                 <ImageView
                     android:id="@+id/alertIcon2"
                     android:layout_width="30dp"
@@ -83,7 +83,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="68dp"
                     android:fontFamily="@font/ramche"
-                    android:text="오늘의 날씨"
+                    android:text="@string/today_weather"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -107,7 +107,7 @@
                     android:layout_marginLeft="180dp"
                     android:fontFamily="@font/ramche"
                     android:textColor="@color/black"
-                    android:text="게시판"
+                    android:text="@string/notice_board"
                     android:textSize="20sp" />
 
                 <Button

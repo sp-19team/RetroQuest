@@ -36,13 +36,13 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-//        val questbtn1 = findViewById<Button>(R.id.quest1)
-//        questbtn1.setOnClickListener {
-//            val intent = Intent(this, DetailQuestActivity::class.java)
-//            intent.putExtra("QUESTDATA", quest1)
-//            startActivity(intent)
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//        }
+        val questbtn1 = findViewById<Button>(R.id.quest1)
+        questbtn1.setOnClickListener {
+            val intent = Intent(this, DetailQuestActivity::class.java)
+            intent.putExtra("QUESTDATA", quest1)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
 //
 //        val questbtn2 = findViewById<Button>(R.id.quest2)
 //        questbtn2.setOnClickListener {
