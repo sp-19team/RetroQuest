@@ -18,6 +18,20 @@ class UserListActivity : AppCompatActivity() {
         val user4 = UserData("이승훈", 25, "INFJ")
 
 
+        var questButton = findViewById<Button>(R.id.questBtn)
+        questButton.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        var noticeButton = findViewById<Button>(R.id.noticetBtn)
+        noticeButton.setOnClickListener {
+            val intent = Intent(this,ComunityActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
         val detailUsersBtn1 = findViewById<Button>(R.id.detailUsersBtn1)
         detailUsersBtn1.setOnClickListener {
             val intent = Intent(this, DetailUsersActivity::class.java)

@@ -43,49 +43,40 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
-//
-//        val questbtn2 = findViewById<Button>(R.id.quest2)
-//        questbtn2.setOnClickListener {
-//            val intent = Intent(this, DetailQuestActivity::class.java)
-//            intent.putExtra("QUESTDATA", quest2)
-//            startActivity(intent)
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//        }
-//
-//        val questbtn3 = findViewById<Button>(R.id.quest3)
-//        questbtn3.setOnClickListener {
-//            val intent = Intent(this, DetailQuestActivity::class.java)
-//            intent.putExtra("QUESTDATA", quest3)
-//            startActivity(intent)
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//        }
-//
-//        val questbtn4 = findViewById<Button>(R.id.quest4)
-//        questbtn4.setOnClickListener {
-//            val intent = Intent(this, DetailQuestActivity::class.java)
-//            intent.putExtra("QUESTDATA", quest4)
-//            startActivity(intent)
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//        }
-//
-//        val questbtn5 = findViewById<Button>(R.id.quest5)
-//        questbtn5.setOnClickListener {
-//            val intent = Intent(this, DetailQuestActivity::class.java)
-//            intent.putExtra("QUESTDATA", quest5)
-//            startActivity(intent)
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//        }
 
-//        val questIds = arrayOf(R.id.quest1, R.id.quest2, R.id.quest3, R.id.quest4, R.id.quest5)  //혹시 몰라서 남겨놓은 간결화 코드. 지금은 인텐트로 넘겨주는 부분을 반복문으로 구현할 방법을 모름
-//
-//        for (questId in questIds) {
-//            val detailQuest = findViewById<Button>(questId)
-//            detailQuest.setOnClickListener {
-//                val intent = Intent(this, DetailQuestActivity::class.java)
-//                startActivity(intent)
-//                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//            }
-//        }
+        val questbtn2 = findViewById<Button>(R.id.quest2)
+        questbtn2.setOnClickListener {
+            val intent = Intent(this, DetailQuestActivity::class.java)
+            intent.putExtra("QUESTDATA", quest2)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val questbtn3 = findViewById<Button>(R.id.quest3)
+        questbtn3.setOnClickListener {
+            val intent = Intent(this, DetailQuestActivity::class.java)
+            intent.putExtra("QUESTDATA", quest3)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val questbtn4 = findViewById<Button>(R.id.quest4)
+        questbtn4.setOnClickListener {
+            val intent = Intent(this, DetailQuestActivity::class.java)
+            intent.putExtra("QUESTDATA", quest4)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val questbtn5 = findViewById<Button>(R.id.quest5)
+        questbtn5.setOnClickListener {
+            val intent = Intent(this, DetailQuestActivity::class.java)
+            intent.putExtra("QUESTDATA", quest5)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+
 
 
     }

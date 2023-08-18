@@ -148,7 +148,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
     private fun checkForMatch(prePosition: Int, position: Int) {
         //처음 카드와 두 번째 카드 이미지가 같다면
         if (cards[prePosition].imageId == cards[position].imageId) {
-            resultText.text = "매치 성공!!"
+            resultText.text = "성공!!"
 
             //매치변경
             cards[prePosition].isMatched = true
@@ -161,7 +161,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
             //완료체크
             checkCompletion()
         } else {
-            resultText.text = "매치실패!!!!"
+            resultText.text = "꽝!!"
         }
     }
 

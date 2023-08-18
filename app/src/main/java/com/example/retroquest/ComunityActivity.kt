@@ -29,6 +29,11 @@ class ComunityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comunity)
 
+        val backButton = findViewById<Button>(R.id.backbtn)
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
+
         moveLinear = findViewById<LinearLayout>(R.id.moveLinear)
         startAnimation()
 
@@ -57,12 +62,6 @@ class ComunityActivity : AppCompatActivity() {
         weather.setImageResource(randomImage)
 
     }
-
-
-
-
-
-
     private fun startAnimation() {
         if (isAnimating) return
         isAnimating = true
@@ -109,16 +108,12 @@ class ComunityActivity : AppCompatActivity() {
         super.onResume()
         startAnimation()
 
-
-
         val writeBtn = findViewById<Button>(R.id.writePostButton)
         writeBtn.setOnClickListener {
             val intent = Intent(this, AddPostActivity::class.java)
             startActivityForResult(intent, REQUEST_ADD_POST)
         }
     }
-
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -149,9 +144,9 @@ class ComunityActivity : AppCompatActivity() {
                 Date()
             )
 
-            postTitleView.text = "제목 : ${post.title}"
-            postContentTextView.text = "작성자 : ${post.author}"
-            postFullContentTextView.text = "내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
+//            postTitleView.text = "제목 : ${post.title}"
+//            postContentTextView.text = "작성자 : ${post.author}"
+//            postFullContentTextView.text = "내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
 
             mainImg.setImageResource(when (post.selectedImg) {
                 1 -> R.drawable.sonci3
@@ -163,7 +158,6 @@ class ComunityActivity : AppCompatActivity() {
 
             postFullContentTextView.visibility = View.GONE
 
-
             itemView.setOnClickListener {
 
                 if (postFullContentTextView.visibility == View.VISIBLE) {
@@ -174,13 +168,9 @@ class ComunityActivity : AppCompatActivity() {
                     postContentTextView.maxLines = Int.MAX_VALUE
                 }
             }
-
-
-
             postTitleView.text = "제목 : ${post.title}"
             postContentTextView.text = "작성자 : ${post.author}"
-            postFullContentTextView.text = "내용 : ${post.fullContent}\n작성 시간 : $formattedDate"
-
+            postFullContentTextView.text = "내용 : ${post.fullContent}\n\n\n작성 시간 : $formattedDate"
 
 
             postListLayout.addView(itemView)
