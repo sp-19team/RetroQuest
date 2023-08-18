@@ -30,15 +30,15 @@ class DetailQuestActivity : AppCompatActivity() {
         }
 
         // 인텐트로 받아온 퀘스트 데이터 UI에 표시
-        val questtitle1 = findViewById<TextView>(R.id.questtitle1)
-        val questdes1 = findViewById<TextView>(R.id.questdes1)
-        val questtype1 = findViewById<TextView>(R.id.questtype1)
-
         val questData = intent.getParcelableExtra<QuestData>("QUESTDATA")
 
-        questtitle1.text = questData?.title
-        questdes1.text = questData?.des
-        questtype1.text = questData?.type
+        val questtitle = findViewById<TextView>(R.id.questtitle)
+        val questdev = findViewById<TextView>(R.id.questdev)
+        val questtype = findViewById<TextView>(R.id.questtype)
+
+        questtitle.text = questData?.title
+        questdev.text = questData?.des
+        questtype.text = questData?.type
 
         // XML에서 정의한 체크박스와 완료버튼
         val questcheck1 = findViewById<CheckBox>(R.id.questcheck1)

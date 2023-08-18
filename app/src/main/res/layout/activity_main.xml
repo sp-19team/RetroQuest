@@ -7,6 +7,7 @@
     android:background="@drawable/questback"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/questBtn"
         android:layout_width="57dp"
