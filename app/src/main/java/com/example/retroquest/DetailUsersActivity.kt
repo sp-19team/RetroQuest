@@ -51,7 +51,7 @@ class DetailUsersActivity : AppCompatActivity() {
         lvTextView.text = "Lv : ${userData?.lv}"
         mbtiTextView.text = "특성 : ${userData?.mbti}"
 
-
+//
 
 
         val algoImageView1 = findViewById<ImageView>(R.id.picArea)
