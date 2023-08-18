@@ -1,19 +1,12 @@
 package com.example.retroquest
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.ObjectAnimator
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
 import android.icu.text.SimpleDateFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -147,7 +140,7 @@ class ComunityActivity : AppCompatActivity() {
 
         val inflater = LayoutInflater.from(this)
         for (post in postList) {
-            val itemView = inflater.inflate(R.layout.post_item, postListLayout, false)
+            val itemView = inflater.inflate(R.layout.activity_post_item, postListLayout, false)
             val postTitleView = itemView.findViewById<TextView>(R.id.postTitleTextView)
             val postContentTextView = itemView.findViewById<TextView>(R.id.postContentTextView)
             val postFullContentTextView = itemView.findViewById<TextView>(R.id.postFullContentTextView)
@@ -168,15 +161,28 @@ class ComunityActivity : AppCompatActivity() {
                 else -> R.drawable.cuvi
             })
 
+            postFullContentTextView.visibility = View.GONE
+
+
             itemView.setOnClickListener {
-                val intent = Intent(this, DetailPostActivity::class.java)
-                intent.putExtra("TITLE", post.title)
-                intent.putExtra("AUTHOR", post.author)
-                intent.putExtra("CONTENT", post.fullContent)
-                intent.putExtra("DATE", formattedDate)
-                intent.putExtra("IMAGE", post.selectedImg)
-                startActivity(intent)
+
+                if (postFullContentTextView.visibility == View.VISIBLE) {
+                    postFullContentTextView.visibility = View.GONE
+                    postContentTextView.maxLines = 2
+                } else {
+                    postFullContentTextView.visibility = View.VISIBLE
+                    postContentTextView.maxLines = Int.MAX_VALUE
+                }
             }
+
+
+
+            postTitleView.text = "제목 : ${post.title}"
+            postContentTextView.text = "작성자 : ${post.author}"
+            postFullContentTextView.text = "내용 : ${post.fullContent}\n작성 시간 : $formattedDate"
+
+
+
             postListLayout.addView(itemView)
         }
     }

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".CommunityActivity">
+    tools:context=".ComunityActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="68dp"
                     android:fontFamily="@font/ramche"
-                    android:text="오늘의 날씨 "
+                    android:text="오늘의 날씨"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
