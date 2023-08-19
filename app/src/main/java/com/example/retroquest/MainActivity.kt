@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
         val quest5 = QuestData("코틀린 문법 학습", "코틀린 문법을 공부합니다.", "일일 퀘스트")
 
 
-        val isQuestCompleted = intent.getBooleanExtra("QUEST_COMPLETED", false)
+        val isQuestCompleted1 = intent.getBooleanExtra("QUEST_COMPLETED1", false)
         val imageView = findViewById<ImageView>(R.id.scroll1)
 
-        if (isQuestCompleted) {
+        if (isQuestCompleted1) {
             imageView.setBackgroundResource(R.drawable.clear)
         } else {
             imageView.setBackgroundResource(R.drawable.quest3)
@@ -56,12 +56,30 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
+        val isQuestCompleted2 = intent.getBooleanExtra("QUEST_COMPLETED2", false)
+        val imageView = findViewById<ImageView>(R.id.scroll2)
+
+        if (isQuestCompleted2) {
+            imageView.setBackgroundResource(R.drawable.clear)
+        } else {
+            imageView.setBackgroundResource(R.drawable.quest3)
+        }
+
         val questbtn2 = findViewById<Button>(R.id.quest2)
         questbtn2.setOnClickListener {
             val intent = Intent(this, DetailQuestActivity::class.java)
             intent.putExtra("QUESTDATA", quest2)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val isQuestCompleted3 = intent.getBooleanExtra("QUEST_COMPLETED3", false)
+        val imageView = findViewById<ImageView>(R.id.scroll3)
+
+        if (isQuestCompleted3) {
+            imageView.setBackgroundResource(R.drawable.clear)
+        } else {
+            imageView.setBackgroundResource(R.drawable.quest3)
         }
 
         val questbtn3 = findViewById<Button>(R.id.quest3)
@@ -72,12 +90,30 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
+        val isQuestCompleted4 = intent.getBooleanExtra("QUEST_COMPLETED4", false)
+        val imageView = findViewById<ImageView>(R.id.scroll4)
+
+        if (isQuestCompleted4) {
+            imageView.setBackgroundResource(R.drawable.clear)
+        } else {
+            imageView.setBackgroundResource(R.drawable.quest3)
+        }
+
         val questbtn4 = findViewById<Button>(R.id.quest4)
         questbtn4.setOnClickListener {
             val intent = Intent(this, DetailQuestActivity::class.java)
-            intent.putExtra("QUESTDATA", quest4)
+            intent.putExtra("QUESTDATA", quest5)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        val isQuestCompleted5 = intent.getBooleanExtra("QUEST_COMPLETED5", false)
+        val imageView = findViewById<ImageView>(R.id.scroll2)
+
+        if (isQuestCompleted5) {
+            imageView.setBackgroundResource(R.drawable.clear)
+        } else {
+            imageView.setBackgroundResource(R.drawable.quest3)
         }
 
         val questbtn5 = findViewById<Button>(R.id.quest5)
@@ -87,6 +123,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
+
 
         val reward1 = ResultData("알고리즘 +1" ,"자신감 +1","실력 +1")
         val reward2 = ResultData("협동력 +1" ,"자신감 +1","실력 +1")
