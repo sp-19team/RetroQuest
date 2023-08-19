@@ -1,0 +1,12 @@
+<resources>
+    <item type="id" name="questbtn1" />
+    <item type="id" name="questbtn2" />
+    <item type="id" name="questbtn3" />
+    <item type="id" name="questbtn4" />
+    <item type="id" name="questbtn5" />
+    <item type="id" name="quest1" />
+    <item type="id" name="quest2" />
+    <item type="id" name="quest3" />
+    <item type="id" name="quest4" />
+    <item type="id" name="quest5" />
+</resources>
