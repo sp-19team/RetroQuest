@@ -10,132 +10,163 @@
     tools:context=".DetailQuestActivity">
 
 
-   <Button
-       android:id="@+id/returnmain"
-       android:layout_width="120dp"
-       android:layout_height="70dp"
-       android:background="@drawable/menuimg"
-       tools:layout_editor_absoluteX="0dp"
-       tools:layout_editor_absoluteY="0dp" />
+    <Button
+        android:id="@+id/returnmain"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:background="@drawable/menuimg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
-   <ImageView
-       android:id="@+id/questdetail"
-       android:layout_width="100dp"
-       android:layout_height="80dp"
-       android:layout_marginTop="0dp"
-       android:foregroundGravity="center"
-       android:src="@drawable/quest3"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.495"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/questdetail"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="0dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/quest3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-   <androidx.constraintlayout.widget.ConstraintLayout
-       android:layout_width="400dp"
-       android:layout_height="520dp"
-       android:layout_marginStart="4dp"
-       android:layout_marginTop="100dp"
-       android:background="@drawable/questcard"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="@+id/questdetail">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="400dp"
+        android:layout_height="520dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/questcard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questdetail"
+        app:layout_constraintVertical_bias="0.0">
 
-       <TextView
-           android:id="@+id/questtitle1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="28dp"
-           android:text="알고리즘 테스트"
-           android:textSize="30dp"
-           app:layout_constraintTop_toTopOf="parent"
-           tools:layout_editor_absoluteX="99dp" />
+        <TextView
+            android:id="@+id/questtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/ramche"
+            android:text="알고리즘 테스트"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-       <TextView
-           android:id="@+id/questdes1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="80dp"
-           android:text="lv.1 알고리즘 문제를 3회 풉니다."
-           android:textSize="20dp"
-           app:layout_constraintTop_toTopOf="parent"
-           tools:layout_editor_absoluteX="64dp" />
+        <TextView
+            android:id="@+id/questdev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ramche"
+            android:text="lv.1 알고리즘 문제를 3회 풉니다."
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.146" />
 
-       <CheckBox
-           android:id="@+id/questcheck1"
-           android:layout_width="35dp"
-           android:layout_height="35dp"
-           android:background="@drawable/quest"
-           tools:layout_editor_absoluteX="16dp"
-           tools:layout_editor_absoluteY="150dp" />
+        <CheckBox
+            android:id="@+id/questcheck1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="348dp"
+            android:background="@drawable/quest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.319" />
 
-       <TextView
-           android:id="@+id/questdetail1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="알고리즘 문제1"
-           android:textSize="20dp"
-           tools:layout_editor_absoluteX="64dp"
-           tools:layout_editor_absoluteY="150dp" />
+        <TextView
+            android:id="@+id/questdetail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="208dp"
+            android:fontFamily="@font/ramche"
+            android:text="알고리즘 문제1"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.316" />
 
-       <CheckBox
-           android:id="@+id/questcheck2"
-           android:layout_width="35dp"
-           android:layout_height="35dp"
-           android:background="@drawable/quest"
-           tools:layout_editor_absoluteX="16dp"
-           tools:layout_editor_absoluteY="220dp" />
+        <CheckBox
 
-       <TextView
-           android:id="@+id/questdetail2"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="알고리즘 문제2"
-           android:textSize="20dp"
-           tools:layout_editor_absoluteX="64dp"
-           tools:layout_editor_absoluteY="220dp" />
+            android:id="@+id/questcheck2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="348dp"
+            android:background="@drawable/quest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.453" />
 
-       <CheckBox
-           android:id="@+id/questcheck3"
-           android:layout_width="35dp"
-           android:layout_height="35dp"
-           android:background="@drawable/quest"
-           tools:layout_editor_absoluteX="16dp"
-           tools:layout_editor_absoluteY="290dp" />
+        <TextView
+            android:id="@+id/questdetail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ramche"
+            android:text="알고리즘 문제2"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.459" />
 
-       <TextView
-           android:id="@+id/questdetail3"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="알고리즘 문제3"
-           android:textSize="20dp"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintHorizontal_bias="0.235"
-           app:layout_constraintStart_toStartOf="parent"
-           tools:layout_editor_absoluteY="290dp" />
+        <CheckBox
+            android:id="@+id/questcheck3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="348dp"
+            android:background="@drawable/quest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.597" />
 
-       <TextView
-           android:id="@+id/questtype1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="448dp"
-           android:text="일일 퀘스트"
-           android:textSize="20dp"
-           app:layout_constraintTop_toTopOf="parent"
-           tools:layout_editor_absoluteX="286dp" />
+        <TextView
+            android:id="@+id/questdetail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ramche"
+            android:text="알고리즘 문제3"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.602" />
 
-       <Button
-           android:id="@+id/complete1"
-           android:layout_width="120dp"
-           android:layout_height="100dp"
-           android:background="@drawable/quest2"
-           app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintVertical_bias="0.828" />
+        <TextView
+            android:id="@+id/questtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="448dp"
+            android:fontFamily="@font/ramche"
+            android:text="일일 퀘스트"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-   </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/complete1"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:background="@drawable/quest2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.828" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
