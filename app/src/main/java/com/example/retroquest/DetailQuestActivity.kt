@@ -83,20 +83,40 @@ class DetailQuestActivity : AppCompatActivity() {
 
                 // MainActivity로 "퀘스트완료" 정보를 전달하고, 이전에 클릭한 버튼에 해당하는 QuestData도 함께 전달
                 val intent = Intent(this@DetailQuestActivity, MainActivity::class.java)
-                intent.putExtra("QUEST_COMPLETED", true)
-                intent.putExtra("QUESTDATA", questData) // questData는 처음에 받은 QuestData 객체
+                // 클릭한 버튼의 ID를 가져와서 해당하는 값을 설정
+                val clickedButtonId = v?.id
+                var questCompletedValue = ""
+
+                when (clickedButtonId) {
+                    R.id.questbtn1 -> {
+                        intent.putExtra("QUESTDATA", true)
+                        questCompletedValue = "QUEST_COMPLETED1"
+                    }
+                    R.id.questbtn2 -> {
+                        intent.putExtra("QUESTDATA", true)
+                        questCompletedValue = "QUEST_COMPLETED2"
+                    }
+                    R.id.questbtn3 -> {
+                        intent.putExtra("QUESTDATA", true)
+                        questCompletedValue = "QUEST_COMPLETED3"
+                    }
+                    R.id.questbtn4 -> {
+                        intent.putExtra("QUESTDATA", true)
+                        questCompletedValue = "QUEST_COMPLETED4"
+                    }
+                    R.id.questbtn5 -> {
+                        intent.putExtra("QUESTDATA", true)
+                        questCompletedValue = "QUEST_COMPLETED5"
+                    }
+                    else -> {
+
+                    }
+                }
+                intent.putExtra("QUEST_COMPLETED", questCompletedValue)
                 startActivity(intent)
             }
         })
     }
-
-    // 체크박스 배경 이미지 업데이트 함수
-    // private fun updateCheckboxDrawable(checkbox: CheckBox, isChecked: Boolean) {
-
-    //   val drawableResId = if (isChecked) R.drawable.people else R.drawable.quest
-
-    //    checkbox.buttonDrawable = resources.getDrawable(drawableResId, null)
-    //}
 
     // 모든 퀘스트가 완료되었는지 확인하는 함수
     private fun checkAllCheckBoxes() {
