@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/questback"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-52dp"
+    tools:layout_editor_absoluteY="-75dp">
 
 
     <Button
@@ -69,7 +71,7 @@
                     android:background="@drawable/blink"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.666"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
@@ -89,7 +91,7 @@
                     android:id="@+id/quesTtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="36dp"
                     android:fontFamily="@font/ramche"
                     android:text="알고리즘 테스트"
@@ -99,9 +101,9 @@
 
                 <TextView
                     android:id="@+id/questmini1"
-                    android:layout_width="147dp"
-                    android:layout_height="43dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_width="161dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
                     android:text="lv.1 알고리즘 문제를 3회 풉니다."
@@ -109,26 +111,30 @@
                     app:layout_constraintStart_toEndOf="@+id/scroll1"
                     app:layout_constraintTop_toBottomOf="@+id/quesTtitle1" />
 
-                <TextView
-                    android:id="@+id/questtype1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/ramche"
-                    android:text="일일 퀘스트"
-                    app:layout_constraintBottom_toTopOf="@+id/questmini1"
-                    app:layout_constraintStart_toEndOf="@+id/quesTtitle1" />
-
                 <Button
                     android:id="@+id/questResult1"
                     android:layout_width="37dp"
                     android:layout_height="34dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="36dp"
                     android:background="@drawable/quest2"
                     app:layout_constraintStart_toEndOf="@+id/questmini1"
                     app:layout_constraintTop_toBottomOf="@+id/questtype1" />
+
+                <TextView
+                    android:id="@+id/questtype1"
+                    android:layout_width="90dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="#BA7C7C7C"
+                    android:fontFamily="@font/ramche"
+                    android:gravity="right"
+                    android:padding="3dp"
+                    android:text="일일 퀘스트"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toTopOf="@+id/questmini1"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -174,7 +180,7 @@
 
                 <TextView
                     android:id="@+id/questmini2"
-                    android:layout_width="147dp"
+                    android:layout_width="159dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -186,21 +192,25 @@
 
                 <TextView
                     android:id="@+id/questtype2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="90dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="#BA6CC5C8"
                     android:fontFamily="@font/ramche"
+                    android:gravity="right"
+                    android:padding="3dp"
                     android:text="주간 퀘스트"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/questmini2"
-                    app:layout_constraintStart_toEndOf="@+id/quesTtitle2" />
+                    app:layout_constraintEnd_toEndOf="parent" />
 
                 <Button
                     android:id="@+id/questResult2"
                     android:layout_width="37dp"
                     android:layout_height="34dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="36dp"
                     android:background="@drawable/quest2"
                     app:layout_constraintStart_toEndOf="@+id/questmini2"
                     app:layout_constraintTop_toBottomOf="@+id/questtype2" />
@@ -249,7 +259,7 @@
 
                 <TextView
                     android:id="@+id/questmini3"
-                    android:layout_width="147dp"
+                    android:layout_width="159dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -261,21 +271,25 @@
 
                 <TextView
                     android:id="@+id/questtype3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="90dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="#BA7C7C7C"
                     android:fontFamily="@font/ramche"
+                    android:gravity="right"
+                    android:padding="3dp"
                     android:text="일일 퀘스트"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/questmini3"
-                    app:layout_constraintStart_toEndOf="@+id/quesTtitle3" />
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
                 <Button
                     android:id="@+id/questResult3"
                     android:layout_width="37dp"
                     android:layout_height="34dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="36dp"
                     android:background="@drawable/quest2"
                     app:layout_constraintStart_toEndOf="@+id/questmini3"
                     app:layout_constraintTop_toBottomOf="@+id/questtype3" />
@@ -324,7 +338,7 @@
 
                 <TextView
                     android:id="@+id/questmini4"
-                    android:layout_width="147dp"
+                    android:layout_width="159dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
@@ -336,21 +350,25 @@
 
                 <TextView
                     android:id="@+id/questtype4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="90dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="#BA6CC5C8"
                     android:fontFamily="@font/ramche"
+                    android:gravity="right"
+                    android:padding="3dp"
                     android:text="주간 퀘스트"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/questmini4"
-                    app:layout_constraintStart_toEndOf="@+id/quesTtitle4" />
+                    app:layout_constraintEnd_toEndOf="parent" />
 
                 <Button
                     android:id="@+id/questResult4"
                     android:layout_width="37dp"
                     android:layout_height="34dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="36dp"
                     android:background="@drawable/quest2"
                     app:layout_constraintStart_toEndOf="@+id/questmini4"
                     app:layout_constraintTop_toBottomOf="@+id/questtype4" />
@@ -378,7 +396,7 @@
                     android:id="@+id/scroll5"
                     android:layout_width="62dp"
                     android:layout_height="52dp"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -390,42 +408,46 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="36dp"
                     android:fontFamily="@font/ramche"
-                    android:text="주간 KPT 작성"
+                    android:text="코틀린 문법 공부"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll5"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/questmini5"
-                    android:layout_width="147dp"
-                    android:layout_height="43dp"
+                    android:layout_width="159dp"
+                    android:layout_height="47dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/ramche"
-                    android:text="이번 주는 어떤 문제가 있었고 어떤 것을 시도했나요?"
+                    android:text="코틀린 문법을 공부합니다."
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/scroll5"
-                    app:layout_constraintTop_toTopOf="@+id/quesTtitle5" />
+                    app:layout_constraintTop_toBottomOf="@+id/quesTtitle5" />
 
                 <TextView
                     android:id="@+id/questtype5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="90dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="#BA7C7C7C"
                     android:fontFamily="@font/ramche"
-                    android:text="주간 퀘스트"
+                    android:gravity="right"
+                    android:padding="3dp"
+                    android:text="일일 퀘스트"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toTopOf="@+id/questmini5"
-                    app:layout_constraintStart_toEndOf="@+id/quesTtitle5" />
+                    app:layout_constraintEnd_toEndOf="parent" />
 
                 <Button
                     android:id="@+id/questResult5"
                     android:layout_width="37dp"
                     android:layout_height="34dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="36dp"
                     android:background="@drawable/quest2"
                     app:layout_constraintStart_toEndOf="@+id/questmini5"
                     app:layout_constraintTop_toBottomOf="@+id/questtype5" />
