@@ -39,12 +39,12 @@ class MainActivity : AppCompatActivity() {
 
 
         val isQuestCompleted1 = intent.getBooleanExtra("QUEST_COMPLETED1", false)
-        val imageView = findViewById<ImageView>(R.id.scroll1)
+        val imageView1 = findViewById<ImageView>(R.id.scroll1)
 
         if (isQuestCompleted1) {
-            imageView.setBackgroundResource(R.drawable.clear)
+            imageView1.setBackgroundResource(R.drawable.clear)
         } else {
-            imageView.setBackgroundResource(R.drawable.quest3)
+            imageView1.setBackgroundResource(R.drawable.quest3)
         }
 
 
@@ -57,12 +57,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         val isQuestCompleted2 = intent.getBooleanExtra("QUEST_COMPLETED2", false)
-        val imageView = findViewById<ImageView>(R.id.scroll2)
+        val imageView2 = findViewById<ImageView>(R.id.scroll2)
 
         if (isQuestCompleted2) {
-            imageView.setBackgroundResource(R.drawable.clear)
+            imageView2.setBackgroundResource(R.drawable.clear)
         } else {
-            imageView.setBackgroundResource(R.drawable.quest3)
+            imageView2.setBackgroundResource(R.drawable.quest3)
         }
 
         val questbtn2 = findViewById<Button>(R.id.quest2)
@@ -74,12 +74,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         val isQuestCompleted3 = intent.getBooleanExtra("QUEST_COMPLETED3", false)
-        val imageView = findViewById<ImageView>(R.id.scroll3)
+        val imageView3 = findViewById<ImageView>(R.id.scroll3)
 
         if (isQuestCompleted3) {
-            imageView.setBackgroundResource(R.drawable.clear)
+            imageView3.setBackgroundResource(R.drawable.clear)
         } else {
-            imageView.setBackgroundResource(R.drawable.quest3)
+            imageView3.setBackgroundResource(R.drawable.quest3)
         }
 
         val questbtn3 = findViewById<Button>(R.id.quest3)
@@ -91,29 +91,29 @@ class MainActivity : AppCompatActivity() {
         }
 
         val isQuestCompleted4 = intent.getBooleanExtra("QUEST_COMPLETED4", false)
-        val imageView = findViewById<ImageView>(R.id.scroll4)
+        val imageView4 = findViewById<ImageView>(R.id.scroll4)
 
         if (isQuestCompleted4) {
-            imageView.setBackgroundResource(R.drawable.clear)
+            imageView4.setBackgroundResource(R.drawable.clear)
         } else {
-            imageView.setBackgroundResource(R.drawable.quest3)
+            imageView4.setBackgroundResource(R.drawable.quest3)
         }
 
         val questbtn4 = findViewById<Button>(R.id.quest4)
         questbtn4.setOnClickListener {
             val intent = Intent(this, DetailQuestActivity::class.java)
-            intent.putExtra("QUESTDATA", quest5)
+            intent.putExtra("QUESTDATA", quest4)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         val isQuestCompleted5 = intent.getBooleanExtra("QUEST_COMPLETED5", false)
-        val imageView = findViewById<ImageView>(R.id.scroll2)
+        val imageView5 = findViewById<ImageView>(R.id.scroll5)
 
         if (isQuestCompleted5) {
-            imageView.setBackgroundResource(R.drawable.clear)
+            imageView5.setBackgroundResource(R.drawable.clear)
         } else {
-            imageView.setBackgroundResource(R.drawable.quest3)
+            imageView5.setBackgroundResource(R.drawable.quest3)
         }
 
         val questbtn5 = findViewById<Button>(R.id.quest5)
