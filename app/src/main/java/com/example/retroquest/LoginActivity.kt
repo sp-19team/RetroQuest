@@ -25,9 +25,9 @@ class LoginActivity : AppCompatActivity() {
         val mainImg = findViewById<ImageView>(R.id.profileImages)
 
 
-        val gifImage =findViewById<ImageView>(R.id.profileImages)
+
         val gifDrawable = GifDrawable(resources,R.drawable.movecat)
-        gifImage.setImageDrawable(gifDrawable)
+        mainImg.setImageDrawable(gifDrawable)
         gifDrawable.start()
 
 

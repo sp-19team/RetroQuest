@@ -89,7 +89,7 @@ class DetailQuestActivity : AppCompatActivity() {
                 // 클릭한 버튼의 ID를 가져와서 해당하는 값을 설정
                 val clickedButtonId = v?.id
                 var questCompletedValue = ""
-
+                if (questcheck1.isChecked && questcheck2.isChecked && questcheck3.isChecked){
                 when (clickedButtonId) {
                     R.id.questbtn1 -> {
                         intent.putExtra("QUESTDATA", true)
@@ -117,6 +117,7 @@ class DetailQuestActivity : AppCompatActivity() {
                 }
                 intent.putExtra("QUEST_COMPLETED", questCompletedValue)
                 startActivity(intent)
+            }
             }
         })
     }

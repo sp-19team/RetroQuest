@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-        val quest1 = QuestData("알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트", "알고리즘 문제1", "알고리즘 문제2", "알고리즘 문제3")
-        val quest2 = QuestData("팀 프로젝트", "팀 프로젝트를 완성합니다.", "주간 퀘스트", "알고리즘 문제다임마", "문제다임마", "뭘바")
-        val quest3 = QuestData("TIL 작성", "TIL을 작성합니다.", "일일 퀘스트", "11", "12", "13")
-        val quest4 = QuestData("WIL 작성", "WIL을 작성합니다.", "주간 퀘스트", "21", "22", "23")
-        val quest5 = QuestData("코틀린 문법 학습", "코틀린 문법을 공부합니다.", "일일 퀘스트", "31", "32", "33")
+        val quest1 = QuestData("알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트", "1 . 최빈값 구하기", "2 . 머쓱이보다 키 큰 사람", "3 . 2차원 만들기")
+        val quest2 = QuestData("팀 프로젝트", "팀 프로젝트를 완성합니다.", "주간 퀘스트", "1 .팀 회의하기", "2 . 커밋룰 정하기", "3 . 하루작업 머지하기")
+        val quest3 = QuestData("TIL 작성", "TIL을 작성합니다.", "일일 퀘스트", "1 . 오늘 한 일 정리하기","2 . TIL 작성","3 . 팀원들과 회고하기")
+        val quest4 = QuestData("WIL 작성", "WIL을 작성합니다.", "주간 퀘스트", "1 . 알고리즘 문제풀이 총정리", "2 . 프로젝트 정리", "3 . 주간 회고KPT")
+        val quest5 = QuestData("코틀린 문법 학습", "코틀린 문법을 공부합니다.", "일일 퀘스트", "1 . if문과 친해지기", "2 . 추상화를 이용해보기", "3 .OOP에 대해서 심화 과정 학습하기")
 
 
         val isQuestCompleted1 = intent.getBooleanExtra("QUEST_COMPLETED1", false)
@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val isQuestCompleted5 = intent.getBooleanExtra("QUEST_COMPLETED5", false)
-        val imageView5 = findViewById<ImageView>(R.id.scroll2)
+        val imageView5 = findViewById<ImageView>(R.id.scroll5)
 
         if (isQuestCompleted5) {
             imageView5.setBackgroundResource(R.drawable.clear)
