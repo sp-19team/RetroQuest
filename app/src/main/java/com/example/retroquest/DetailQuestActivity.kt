@@ -117,7 +117,7 @@ class DetailQuestActivity : AppCompatActivity() {
             }
         })
     }
-
+//test
     // 모든 퀘스트가 완료되었는지 확인하는 함수
     private fun checkAllCheckBoxes() {
         // XML에서 모든 CheckBox ID를 가져와서 체크
