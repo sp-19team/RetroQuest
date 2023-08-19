@@ -86,70 +86,71 @@ class DetailQuestActivity : AppCompatActivity() {
             startActivity(intent)
 
 
-            // 퀘스트 완료 버튼
-            completeButton.setOnClickListener(object : View.OnClickListener {
-                override fun onClick(v: View?) {
-                    // XML에 있는 모든 CheckBox를 찾아서 체크
+
+                // 퀘스트 완료 버튼
+                completeButton.setOnClickListener(object : View.OnClickListener {
+                    override fun onClick(v: View?) {
+                        // XML에 있는 모든 CheckBox를 찾아서 체크
                     checkAllCheckBoxes()
 
-                    // MainActivity로 "퀘스트완료" 정보를 전달하고, 이전에 클릭한 버튼에 해당하는 QuestData도 함께 전달
-                    val intent = Intent(this@DetailQuestActivity, MainActivity::class.java)
-                    // 클릭한 버튼의 ID를 가져와서 해당하는 값을 설정
-                    val clickedButtonId = v?.id
-                    var questCompletedValue = ""
-                    if (questcheck1.isChecked && questcheck2.isChecked && questcheck3.isChecked) {
-                        when (clickedButtonId) {
-                            R.id.questbtn1 -> {
-                                intent.putExtra("QUESTDATA", true)
-                                questCompletedValue = "QUEST_COMPLETED1"
-                            }
+                        // MainActivity로 "퀘스트완료" 정보를 전달하고, 이전에 클릭한 버튼에 해당하는 QuestData도 함께 전달
+                        val intent = Intent(this@DetailQuestActivity, MainActivity::class.java)
+                        // 클릭한 버튼의 ID를 가져와서 해당하는 값을 설정
+                        val clickedButtonId = v?.id
+                        var questCompletedValue = ""
+                        if (questcheck1.isChecked && questcheck2.isChecked && questcheck3.isChecked) {
+                            when (clickedButtonId) {
+                                R.id.questbtn1 -> {
+                                    intent.putExtra("QUESTDATA", true)
+                                    questCompletedValue = "QUEST_COMPLETED1"
+                                }
 
-                            R.id.questbtn2 -> {
-                                intent.putExtra("QUESTDATA", true)
-                                questCompletedValue = "QUEST_COMPLETED2"
-                            }
+                                R.id.questbtn2 -> {
+                                    intent.putExtra("QUESTDATA", true)
+                                    questCompletedValue = "QUEST_COMPLETED2"
+                                }
 
-                            R.id.questbtn3 -> {
-                                intent.putExtra("QUESTDATA", true)
-                                questCompletedValue = "QUEST_COMPLETED3"
-                            }
+                                R.id.questbtn3 -> {
+                                    intent.putExtra("QUESTDATA", true)
+                                    questCompletedValue = "QUEST_COMPLETED3"
+                                }
 
-                            R.id.questbtn4 -> {
-                                intent.putExtra("QUESTDATA", true)
-                                questCompletedValue = "QUEST_COMPLETED4"
-                            }
+                                R.id.questbtn4 -> {
+                                    intent.putExtra("QUESTDATA", true)
+                                    questCompletedValue = "QUEST_COMPLETED4"
+                                }
 
-                            R.id.questbtn5 -> {
-                                intent.putExtra("QUESTDATA", true)
-                                questCompletedValue = "QUEST_COMPLETED5"
-                            }
+                                R.id.questbtn5 -> {
+                                    intent.putExtra("QUESTDATA", true)
+                                    questCompletedValue = "QUEST_COMPLETED5"
+                                }
 
-                            else -> {
+                                else -> {
 
+                                }
                             }
+                            intent.putExtra("QUEST_COMPLETED", questCompletedValue)
+                            startActivity(intent)
                         }
-                        intent.putExtra("QUEST_COMPLETED", questCompletedValue)
-                        startActivity(intent)
                     }
-                }
-            })
+                })
+            }
+
+        }
+        fun checkAllCheckBoxes() {
+            // XML에서 모든 CheckBox ID를 가져와서 체크
+            val checkBoxIds = arrayOf(
+                R.id.questcheck1, R.id.questcheck2, R.id.questcheck3
+
+            )
+
+            for (checkBoxId in checkBoxIds) {
+                val checkBox = findViewById<CheckBox>(checkBoxId)
+                checkBox.isChecked = true
+            }
         }
 
     }
-    fun checkAllCheckBoxes() {
-        // XML에서 모든 CheckBox ID를 가져와서 체크
-        val checkBoxIds = arrayOf(
-            R.id.questcheck1,R.id.questcheck2,R.id.questcheck3
-
-        )
-
-        for (checkBoxId in checkBoxIds) {
-            val checkBox = findViewById<CheckBox>(checkBoxId)
-            checkBox.isChecked = true
-        }
-    }
-
-}
 
 
 

@@ -144,9 +144,7 @@ class ComunityActivity : AppCompatActivity() {
                 Date()
             )
 
-//            postTitleView.text = "제목 : ${post.title}"
-//            postContentTextView.text = "작성자 : ${post.author}"
-//            postFullContentTextView.text = "내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
+
 
             mainImg.setImageResource(when (post.selectedImg) {
                 1 -> R.drawable.sonci3

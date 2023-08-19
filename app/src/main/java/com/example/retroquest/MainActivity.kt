@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-        val quest1 = QuestData("알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트", "1 . 최빈값 구하기", "2 . 머쓱이보다 키 큰 사람", "3 . 2차원 만들기")
+        val quest1 = QuestData("알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트", "1 . 최빈값 구하기", "  2 . 머쓱이보다 키 큰 사람", "3 . 2차원 만들기")
         val quest2 = QuestData("팀 프로젝트", "팀 프로젝트를 완성합니다.", "주간 퀘스트", "1 .팀 회의하기", "2 . 커밋룰 정하기", "3 . 하루작업 머지하기")
         val quest3 = QuestData("TIL 작성", "TIL을 작성합니다.", "일일 퀘스트", "1 . 오늘 한 일 정리하기","2 . TIL 작성","3 . 팀원들과 회고하기")
         val quest4 = QuestData("WIL 작성", "WIL을 작성합니다.", "주간 퀘스트", "1 . 알고리즘 문제풀이 총정리", "2 . 프로젝트 정리", "3 . 주간 회고KPT")
