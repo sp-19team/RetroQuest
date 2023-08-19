@@ -36,11 +36,7 @@ Retro Quest - 레트로 감성과 모험적인 느낌: "Retro"는 과거의 감�
 ### 3. 디테일 페이지 (디테일 퀘스트 페이지)(Detail Quest)
 - 메인 퀘스트에서 선택한 퀘스트의 상세 내용을 표시합니다.
 - 체크박스와 보상 상자를 통해 퀘스트 완료 여부를 표시합니다.
-
-
 ![0819231449513523](https://github.com/sp-19team/RetroQuest/assets/136980408/43e8b4d8-b96b-4cd1-9a4b-2e39f10a425e)
-
-
 
 
 
@@ -88,11 +84,11 @@ ClickListener를 사용하여 게임 로직을 구현하였으며, 게임 시작
 - 스플레시 이미지는 게임 컨셉에 따라 동적으로 표현되었습니다.
 
 ## 📽사용 기술 및 라이브러리
--프로그래밍 언어: Kotlin
--안드로이드 라이브러리: AndroidX
--화면 전환 애니메이션: overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
--데이터 전달: Intent.putExtra를 활용하여 데이터 전달
--GIF 이미지: 동적 배경화면 및 게임 페이지에 사용
--UI 디자인: 각 페이지의 UI/UX 디자인 및 구현
--게임 로직: '같은 그림 찾기' 게임을 구현하는 데 사용 
--
+- 프로그래밍 언어: Kotlin 
+- 안드로이드 라이브러리: AndroidX
+- 화면 전환 애니메이션: overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+- 데이터 전달: Intent.putExtra를 활용하여 데이터 전달
+- GIF 이미지: 동적 배경화면 및 게임 페이지에 사용
+- UI 디자인: 각 페이지의 UI/UX 디자인 및 구현
+- 게임 로직: '같은 그림 찾기' 게임을 구현하는 데 사용 
+
