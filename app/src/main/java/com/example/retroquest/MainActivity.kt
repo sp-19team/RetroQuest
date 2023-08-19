@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-        val quest1 = QuestData("알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트")
-        val quest2 = QuestData("팀 프로젝트", "팀 프로젝트를 완성합니다.", "주간 퀘스트")
-        val quest3 = QuestData("TIL 작성", "TIL을 작성합니다.", "일일 퀘스트")
-        val quest4 = QuestData("WIL 작성", "WIL을 작성합니다.", "주간 퀘스트")
-        val quest5 = QuestData("코틀린 문법 학습", "코틀린 문법을 공부합니다.", "일일 퀘스트")
+        val quest1 = QuestData("알고리즘 테스트", "lv.1 알고리즘 문제를 3회 풉니다.", "일일 퀘스트", "알고리즘 문제1", "알고리즘 문제2", "알고리즘 문제3")
+        val quest2 = QuestData("팀 프로젝트", "팀 프로젝트를 완성합니다.", "주간 퀘스트", "1", "2", "3")
+        val quest3 = QuestData("TIL 작성", "TIL을 작성합니다.", "일일 퀘스트", "11", "12", "13")
+        val quest4 = QuestData("WIL 작성", "WIL을 작성합니다.", "주간 퀘스트", "21", "22", "23")
+        val quest5 = QuestData("코틀린 문법 학습", "코틀린 문법을 공부합니다.", "일일 퀘스트", "31", "32", "33")
 
 
         val isQuestCompleted1 = intent.getBooleanExtra("QUEST_COMPLETED1", false)

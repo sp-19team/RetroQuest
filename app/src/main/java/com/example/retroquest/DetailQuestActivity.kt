@@ -12,12 +12,9 @@ import android.widget.TextView
 class DetailQuestActivity : AppCompatActivity() {
 
     // 체크박스와 버튼을 가리키는 변수
-    private lateinit var questcheck1: CheckBox
-    private lateinit var questcheck2: CheckBox
-    private lateinit var questcheck3: CheckBox
-    private lateinit var questcomplete: Button
+
     // 모든 퀘스트가 완료되었는지 나타내는 변수
-    private var allQuestsCompleted = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +33,16 @@ class DetailQuestActivity : AppCompatActivity() {
         val questtitle = findViewById<TextView>(R.id.questtitle)
         val questdev = findViewById<TextView>(R.id.questdev)
         val questtype = findViewById<TextView>(R.id.questtype)
+        val questdetail1 = findViewById<TextView>(R.id.questdetail1)
+        val questdetail2 = findViewById<TextView>(R.id.questdetail2)
+        val questdetail3 = findViewById<TextView>(R.id.questdetail3)
 
         questtitle.text = questData?.title
         questdev.text = questData?.des
         questtype.text = questData?.type
+        questdetail1.text = questData?.dequest1
+        questdetail2.text = questData?.dequest2
+        questdetail3.text = questData?.dequest3
 
         // XML에서 정의한 체크박스와 완료버튼
         val questcheck1 = findViewById<CheckBox>(R.id.questcheck1)
