@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import pl.droidsonroids.gif.GifDrawable
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,7 +25,11 @@ class LoginActivity : AppCompatActivity() {
         val mainImg = findViewById<ImageView>(R.id.profileImages)
 
 
-        //선택 이미지 보여주기
+
+        val gifDrawable = GifDrawable(resources,R.drawable.movecat)
+        mainImg.setImageDrawable(gifDrawable)
+        gifDrawable.start()
+
 
 
         //signUp에서 정보 가져오기
@@ -53,14 +58,13 @@ class LoginActivity : AppCompatActivity() {
         // 시작 버튼 눌렸을 때 main화면 실행
         val login = findViewById<Button>(R.id.loginBtn)
 
-
-
         login.setOnClickListener {
             val loginId = loginText.text.toString()
             val loginPw = pwText.text.toString()
             if (loginId.isNotEmpty() && loginPw.isNotEmpty()){
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
 
             }else {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
@@ -74,6 +78,7 @@ class LoginActivity : AppCompatActivity() {
         signUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             activityResultLauncher.launch(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
 
         }
 

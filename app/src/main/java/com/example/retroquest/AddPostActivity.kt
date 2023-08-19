@@ -21,9 +21,12 @@ class AddPostActivity : AppCompatActivity() {
 
 
 
+
         val titleEditText = findViewById<EditText>(R.id.titleEditText)
         val authorEditText = findViewById<EditText>(R.id.authorEditText)
         val contentEditText = findViewById<EditText>(R.id.contentEditText)
+
+
 
         val submitBtn = findViewById<Button>(R.id.submitButton)
         submitBtn.setOnClickListener {
@@ -34,7 +37,7 @@ class AddPostActivity : AppCompatActivity() {
             val curentDate = SimpleDateFormat("YYYY-MM-DD", Locale.getDefault()).format(Date())
             if (title.isEmpty() || author.isEmpty() || content.isEmpty()) {
                 // 필수 정보를 입력하지 않았을 경우 Toast 메시지 출력
-                Toast.makeText(this, "모든 정보를 입력하세요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "아직 빈칸이 있어요~ ", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -73,7 +76,7 @@ class AddPostActivity : AppCompatActivity() {
 
             val cancle = findViewById<Button>(R.id.cancelButton)
             cancle.setOnClickListener {
-                finish()
+                onBackPressed()
             }
 
         }

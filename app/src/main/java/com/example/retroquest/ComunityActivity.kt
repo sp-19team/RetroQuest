@@ -1,19 +1,12 @@
 package com.example.retroquest
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.ObjectAnimator
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
 import android.icu.text.SimpleDateFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -23,13 +16,23 @@ import java.util.Date
 import java.util.Locale
 
 class ComunityActivity : AppCompatActivity() {
+    companion object {
+        const val REQUEST_ADD_POST = 1
+
+    }
    private val postList = mutableListOf<PostData>()
+
     private lateinit var moveLinear: View
 
     private var isAnimating = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comunity)
+
+        val backButton = findViewById<Button>(R.id.backbtn)
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
 
         moveLinear = findViewById<LinearLayout>(R.id.moveLinear)
         startAnimation()
@@ -59,12 +62,6 @@ class ComunityActivity : AppCompatActivity() {
         weather.setImageResource(randomImage)
 
     }
-
-
-
-
-
-
     private fun startAnimation() {
         if (isAnimating) return
         isAnimating = true
@@ -111,35 +108,12 @@ class ComunityActivity : AppCompatActivity() {
         super.onResume()
         startAnimation()
 
-//혹시모르니깐 임의로 나둔거 나중에 최종일 때 삭제예정
-//        val postListLayout = findViewById<LinearLayout>(R.id.postListLayout)
-
-//         val inflater = LayoutInflater.from(this)
-//        for (post in postList){
-//            val itemView = inflater.inflate(R.layout.post_item,postListLayout,false)
-//
-//            val postTitleView =itemView.findViewById<TextView>(R.id.postTitleTextView)
-//            val postContentTextView = itemView.findViewById<TextView>(R.id.postContentTextView)
-//            val postFullContentTextView = itemView.findViewById<TextView>(R.id.postFullContentTextView)
-//
-//            postTitleView.text =post.title
-//            postContentTextView.text = post.author
-//            postFullContentTextView.text = post.fullContent
-//
-//            itemView.setOnClickListener{
-//                postFullContentTextView.visibility  = View.VISIBLE
-//            }
-//            postListLayout.addView(itemView)
-//        }
-
         val writeBtn = findViewById<Button>(R.id.writePostButton)
         writeBtn.setOnClickListener {
             val intent = Intent(this, AddPostActivity::class.java)
             startActivityForResult(intent, REQUEST_ADD_POST)
         }
     }
-
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -148,21 +122,20 @@ class ComunityActivity : AppCompatActivity() {
             val author = data?.getStringExtra("AUTHOR")
             val content = data?.getStringExtra("CONTENT")
             val date = data?.getStringExtra("DATE")
-            val selectedImg = data?.getIntExtra("IMAGE",0)
+            val selectedImg = data?.getIntExtra("IMAGE", 0)
 
-            postList.add(PostData(title!!, author!!, content!!, date!!,selectedImg!!)) // 리스트에 아이템 추가
-
+            postList.add(PostData(title!!, author!!, content!!, date!!, selectedImg!!)) // 리스트에 아이템 추가
             updatePostList(selectedImg) // 아이템 목록 갱신
         }
     }
 
     private fun updatePostList(selectedImg: Int) {
         val postListLayout = findViewById<LinearLayout>(R.id.postListLayout)
-         postListLayout.removeAllViews()
+        postListLayout.removeAllViews()
 
         val inflater = LayoutInflater.from(this)
         for (post in postList) {
-            val itemView = inflater.inflate(R.layout.post_item, postListLayout, false)
+            val itemView = inflater.inflate(R.layout.activity_post_item, postListLayout, false)
             val postTitleView = itemView.findViewById<TextView>(R.id.postTitleTextView)
             val postContentTextView = itemView.findViewById<TextView>(R.id.postContentTextView)
             val postFullContentTextView = itemView.findViewById<TextView>(R.id.postFullContentTextView)
@@ -171,11 +144,11 @@ class ComunityActivity : AppCompatActivity() {
                 Date()
             )
 
-            postTitleView.text = "제목 : ${post.title}"
-            postContentTextView.text = "작성자 : ${post.author}"
-            postFullContentTextView.text ="내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
+//            postTitleView.text = "제목 : ${post.title}"
+//            postContentTextView.text = "작성자 : ${post.author}"
+//            postFullContentTextView.text = "내용 : ${post.fullContent}\n입력한시간 : ${formattedDate}"
 
-            mainImg.setImageResource(when(post.selectedImg) {
+            mainImg.setImageResource(when (post.selectedImg) {
                 1 -> R.drawable.sonci3
                 2 -> R.drawable.mario2
                 3 -> R.drawable.picachu
@@ -183,16 +156,24 @@ class ComunityActivity : AppCompatActivity() {
                 else -> R.drawable.cuvi
             })
 
-
+            postFullContentTextView.visibility = View.GONE
 
             itemView.setOnClickListener {
-                postFullContentTextView.visibility = View.VISIBLE
+
+                if (postFullContentTextView.visibility == View.VISIBLE) {
+                    postFullContentTextView.visibility = View.GONE
+                    postContentTextView.maxLines = 2
+                } else {
+                    postFullContentTextView.visibility = View.VISIBLE
+                    postContentTextView.maxLines = Int.MAX_VALUE
+                }
             }
+            postTitleView.text = "제목 : ${post.title}"
+            postContentTextView.text = "작성자 : ${post.author}"
+            postFullContentTextView.text = "내용 : ${post.fullContent}\n\n\n작성 시간 : $formattedDate"
+
+
             postListLayout.addView(itemView)
         }
-    }
-
-    companion object {
-        const val REQUEST_ADD_POST = 1
     }
 }
