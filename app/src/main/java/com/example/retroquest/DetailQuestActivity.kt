@@ -81,9 +81,10 @@ class DetailQuestActivity : AppCompatActivity() {
                 // XML에 있는 모든 CheckBox를 찾아서 체크
                 checkAllCheckBoxes()
 
-                // MainActivity로 "퀘스트완료" 정보를 전달
+                // MainActivity로 "퀘스트완료" 정보를 전달하고, 이전에 클릭한 버튼에 해당하는 QuestData도 함께 전달
                 val intent = Intent(this@DetailQuestActivity, MainActivity::class.java)
-                intent.putExtra("quest_status", "퀘스트완료")
+                intent.putExtra("QUEST_COMPLETED", true)
+                intent.putExtra("QUESTDATA", questData) // questData는 처음에 받은 QuestData 객체
                 startActivity(intent)
             }
         })
